@@ -1,0 +1,18 @@
+@import './var.scss';
+
+@import './style.scss';
+
+@import './helper/font.scss';
+@import './helper/reset.scss';
+@import './helper/ultil.scss';
+@import './helper/base.scss';
+
+
+.app {
+	&__main {
+		margin: auto;
+		min-height: 100vh;
+		background: $white;
+		overflow: auto;
+	}
+}

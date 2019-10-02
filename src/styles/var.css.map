@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAyBA;qDACqD;AAOrD;qDACqD;AAWrD;qDACqD;AAerD;qDACqD;AAqBrD;qDACqD;AAcrD;qDACqD",
+    "sources": [
+        "var.scss",
+        "mixin.scss"
+    ],
+    "names": [],
+    "file": "var.css"
+}

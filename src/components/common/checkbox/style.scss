@@ -1,0 +1,63 @@
+@import 'styles/var.scss';
+$checkbox_border: #cecece;
+$checkbox_active: #008fba;
+
+.form-check {
+	&.form-check {
+		&--custom {
+			padding: 0;
+		}
+	}
+
+	&--custom {
+		.form-check-input {
+			display: none;
+
+			&:checked ~ .form-check-label {
+				.icon {
+					opacity: 1;
+				}
+			}
+		}
+
+		.form-check-label {
+			padding-left: em(30px);
+			position: relative;
+
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+			}
+
+			&::before {
+				width: 21px;
+				height: 21px;
+				border: 0.5px solid $checkbox_border;
+				box-sizing: border-box;
+				border-radius: 2px;
+				top: 0;
+				left: 0;
+			}
+
+			&::after {
+				width: 13px;
+				height: 13px;
+				background: $checkbox_active;
+				border-radius: 1px;
+				top: 5px;
+				left: 5px;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+
+			.icon {
+				position: absolute;
+				top: 4.5px;
+				left: 4.5px;
+				opacity: 0;
+			}
+		}
+	}
+}

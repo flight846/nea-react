@@ -1,0 +1,134 @@
+@import 'styles/var.scss';
+@import 'styles/helper/buttons.scss';
+
+.modal {
+    .modal-dialog { 
+        width: -webkit-min-content; 
+        width: -moz-min-content; 
+        width: min-content; 
+        min-width: 420px; 
+        max-width: 1000px;
+        @include max-ml {
+            margin: auto;
+            min-width: 300px;
+            max-width: 300px;
+        }
+    }
+    .modal-header, .modal-body, .modal-content {
+        border: none;
+        padding: 0;
+    }
+
+    .modal-body { 
+        padding: 1.5rem; 
+        @include max-ml {
+            padding: 0;
+        }
+    }
+    .modal-content {
+        @include max-ml {
+            padding: 1rem;
+        }
+
+        .modal-reason {
+            border: none;
+            border-bottom: 1px solid $border-grey; 
+            border-radius: 0;
+            padding-left: 0;
+        }
+
+        .modal-others {
+            padding-left: 32px;
+            margin-bottom: 30px;
+        }
+    }
+    &.system-modal {
+        
+        .modal-content { 
+            .modal-footer {
+                border: none;
+                padding: 0;
+            }
+
+        }
+    }
+    &.action-modal {
+        .modal-footer { padding: 1rem; }
+    }
+}
+
+.upload-drop-zone { 
+	display: -webkit-box; 
+	display: -ms-flexbox; 
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	width: 600px; 
+	height: 280px; 
+	background-color: $bg-light-grey; 
+	border-style: dashed;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+			justify-content: center;
+    align-items: center;
+	.form-group {
+		position: relative;
+		width: auto;
+	}
+	
+	& input[type=file] {
+		opacity:0;
+		width: 70px;
+		position: absolute;
+		top: 0; 
+		left: 0;
+
+		@include max-ml {
+			left: -36px;
+			width: 170px;
+		}
+	}
+
+	& .browse {
+		display: block;
+		cursor: pointer;
+		color: $text-blue;
+		margin: 0 3px;
+	}
+
+	.plus-icon {
+		width: 24px;
+		height: 24px;
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	@include max-ml {
+		background-color: transparent;
+		border: 0;
+		width: auto;
+		height: auto;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+				align-items: flex-start;
+	}
+}
+
+.upload-drop-zone__files {
+	& li { 
+		margin: 10px 0; 
+		line-height: 24px;
+		&:after {
+			content: '';
+			background: url(../../../assets/svg/cancel.svg) no-repeat center center;
+			background-size: 20px;
+			height: 24px;
+			width: 24px;
+			display: inline-block; 
+			margin: -7px 10px;
+			cursor: pointer;
+		}
+	}
+}

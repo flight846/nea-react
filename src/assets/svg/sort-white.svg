@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>icon/sort/white</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon/sort/white" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.000000, 5.000000)" fill="#F2F2F2" fill-rule="nonzero">
+            <path d="M1,2.5 L19,2.5 C19.5522847,2.5 20,2.05228475 20,1.5 C20,0.94771525 19.5522847,0.5 19,0.5 L1,0.5 C0.44771525,0.5 0,0.94771525 0,1.5 C0,2.05228475 0.44771525,2.5 1,2.5 Z" id="Line-3"></path>
+            <path d="M1,6.5 L15,6.5 C15.5522847,6.5 16,6.05228475 16,5.5 C16,4.94771525 15.5522847,4.5 15,4.5 L1,4.5 C0.44771525,4.5 0,4.94771525 0,5.5 C0,6.05228475 0.44771525,6.5 1,6.5 Z" id="Line-3-Copy"></path>
+            <path d="M1,10.5 L10.7135834,10.5 C11.2658682,10.5 11.7135834,10.0522847 11.7135834,9.5 C11.7135834,8.94771525 11.2658682,8.5 10.7135834,8.5 L1,8.5 C0.44771525,8.5 0,8.94771525 0,9.5 C0,10.0522847 0.44771525,10.5 1,10.5 Z" id="Line-3-Copy-2"></path>
+        </g>
+    </g>
+</svg>

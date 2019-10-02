@@ -1,0 +1,80 @@
+@import 'styles/var.scss';
+
+.filter {
+	&__main {
+		font-size: $font_size;
+		position: relative;
+
+
+	}
+}
+
+
+.searchWrapper {
+position: relative; 
+
+& .searchTextfield {
+	width: 100%;
+	border-radius: 5px;
+	border: solid 1px $border-light-grey2;
+	padding: 10px; 
+	font-size: $font_size;
+}
+
+& .searchIcon {
+	position: absolute;
+	right: 10px;
+	top: 13px;
+	width: 20px;
+	z-index: 9;
+	cursor: pointer;
+}
+
+@include max-lg {
+	width: 100%;
+}
+}
+
+.filterWrapper {
+background-color: $bg-white;
+padding: 15px 30px;
+
+& .filterSortWrapper {
+	padding-top: 10px;
+	text-align: right;
+
+	@include max-lg {
+		text-align: left;
+		padding-top: 15px;
+	}
+}
+
+& .filterCont {
+	display: inline-block;
+	font-size: $font_size;
+	padding-right: 50px;
+
+	& svg {
+		padding-left: 10px;
+		width: 30px;
+	}
+}
+& .sortCont {
+	display: inline-block;
+	font-size: $font_size;
+
+	& svg {
+		padding-left: 10px;
+		width: 30px;
+	}
+
+	& .btn-link {
+		text-decoration:none;
+		color: $text-black;
+
+		&:hover{
+			border:solid 1px #fff;
+		}
+	}
+}
+}

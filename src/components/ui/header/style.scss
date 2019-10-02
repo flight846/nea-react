@@ -1,0 +1,122 @@
+@import 'styles/var.scss';
+
+.govtSite {
+	padding: 3px 0;
+	font-size: $font_size_xs;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	background-color: $bg-light-grey;
+
+	& img {
+		padding-right: 5px;
+	}
+
+	@include max-ml {
+		text-align: center;
+	}
+}
+
+.header {
+	&__main {
+		font-size: $font_size;
+		position: relative;
+	}
+
+	&__toggle {
+		background: none;
+		border: none;
+		outline: none;
+	}
+
+	background-color: $bg-white;
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(213,216,221,1);
+	-moz-box-shadow: 0px 1px 3px 0px rgba(213,216,221,1);
+	box-shadow: 0px 1px 3px 0px rgba(213,216,221,1);
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+	top: 26px;
+
+	& .logoImg {
+		width: 160px;
+	}
+}
+
+.headerRHS {
+	padding-top: 13px;
+	& li {
+		display: inline-block; 
+		padding: 0 20px;
+
+		@include max-ml {
+			padding: 0 10px;
+
+			&.uNameCont {
+				display:none;
+			}
+		}
+
+		& .avatarImg {
+			width: 35px;
+			margin-right: 5px;
+		}
+		& .bellImg {
+			width: 25px;
+		}
+
+		& .userName {
+			font-size: $font_size; 
+			font-family: $fontBold; 
+			display: inline-block;
+
+			@include max-ml {
+				display: none;
+			}
+		}
+
+		@include min-ml {
+			&.ipadNavCont {
+				display: none;
+			}
+		}
+
+		& .fontIncrease {
+			border: solid 1px $border-light-grey2; 
+			border-radius: 20px; 
+
+			@include max-ml {
+				display: none;
+			}
+
+			& li {
+				border-right: solid 1px $border-light-grey2;
+				padding: 0;
+
+				&:last-child {
+					border-right: none; 
+					padding-right: 8px;
+				}
+
+				&:first-child {
+					padding-left: 8px;
+				}
+			}
+
+			& a {
+				padding: 5px 10px 2px 10px;
+			}
+
+			& .smallFont {
+				font-size: $font_size_xs;
+			}
+			& .mediumFont {
+				font-size: $font_size;
+			}
+			& .bigFont {
+				font-size: $font_size_xl;
+			}
+		}
+	}
+}

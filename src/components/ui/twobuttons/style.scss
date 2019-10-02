@@ -1,0 +1,46 @@
+@import 'styles/var.scss';
+
+.component__action-dot{
+	.action-dot{
+		color: $text-blue;
+		font-size: $font_size_xxxl;
+		text-align: center;
+		cursor: pointer;
+		margin-top: -20px;
+		display: inline-block;
+		position: relative;
+	}
+	.action-dot-click{
+		display:none;
+		position: absolute;
+		right: 10px;
+		margin-top: -10px;
+
+		.action-list{
+			font-size: $font_size_sm;
+			color: $text-blue;
+			padding: 5px 10px;
+			background-color: $bg-white;
+			min-width: 120px;
+
+			&:first-child{
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				box-shadow: -1px -1px 14px -6px #666666;
+			}
+
+			&:last-child{
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				box-shadow: -3px 3px 9px -6px #666666;
+			}
+
+			&:hover{
+				color: $text-white;
+				background-color: $bg-blue;
+			}
+		}
+	}
+}
+
+

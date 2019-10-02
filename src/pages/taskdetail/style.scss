@@ -1,0 +1,36 @@
+@import 'styles/var.scss';
+
+.task_detail {
+	&__page {
+		position: relative;
+		font-size: $font-size;
+	}
+
+	&__title {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding-bottom: 15px !important;
+	}
+
+	&__controls {
+		padding-right: 30px;
+
+		.btn {
+			min-width: 150px;
+			margin-left: 15px;
+		}
+	}
+
+	&__panel {
+		background: $white;
+	}
+
+	&__tab {
+		font-size: 20px;
+
+		.nav-link {
+			padding: 15px 20px;
+		}
+	}
+}

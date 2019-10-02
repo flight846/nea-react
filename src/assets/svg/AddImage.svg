@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="83px" height="60px" viewBox="0 0 83 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Icon / AddImage</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Receive-Sample-(Admin)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.3">
+        <g id="1.5-Desktop-Admin---2Scan_Scan_NSamples-View-reason-popup" transform="translate(-681.000000, -456.000000)" fill="#354052">
+            <g id="pop-up" transform="translate(528.000000, 240.000000)">
+                <g id="Image" transform="translate(44.000000, 143.000000)">
+                    <g id="Icon-/-placeholder" transform="translate(104.000000, 67.000000)">
+                        <g id="Image" transform="translate(5.166667, 6.000000)">
+                            <g fill-rule="nonzero" id="Shape">
+                                <path d="M0,60 L82.6666667,60 L82.6666667,0 L0,0 L0,60 Z M79.2222222,3.33333333 L79.2222222,19.31 L68.8888889,9.31 L39.6111111,37.6433333 L22.3888889,20.9766667 L3.44444444,39.31 L3.44444444,3.33333333 L79.2222222,3.33333333 Z"></path>
+                                <path d="M40.3,26 C35.74176,26 32.0333333,22.1869 32.0333333,17.5 C32.0333333,12.8131 35.74176,9 40.3,9 C44.85824,9 48.5666667,12.8131 48.5666667,17.5 C48.5666667,22.1869 44.85824,26 40.3,26 Z"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

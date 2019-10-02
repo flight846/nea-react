@@ -1,0 +1,33 @@
+@import 'styles/var.scss';
+
+.SampleSelWrapper {
+	padding: 30px 30px 30px 30px; 
+
+	& .sampleSelCont {
+		padding: 10px 20px;
+		border: solid 1px $border-black;
+		display: inline-block;
+		border-radius: 5px;
+		width: 200px;
+		margin-right: 5px;
+
+		& .sampleTxt, 
+		& .sampleCount {
+			font-family: $fontBold;
+		}
+
+		& .sampleTxt {
+			float: left;
+			color: $text-dark-blue;
+			font-size: $font_size_l;
+			width: 115px;
+		}
+
+		& .sampleCount {
+			float: right;
+			font-size: $font_size_xxxl;
+			color: $text-blue;
+			padding-left: 20px;
+		}
+	}
+}

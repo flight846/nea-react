@@ -1,0 +1,84 @@
+@import 'styles/var.scss';
+
+.specimen {
+	font-size: $font_size;
+	position: relative;
+
+	&__row {
+		display: flex;
+		margin-bottom: 10px;
+	}
+
+	&__label {
+		font-weight: bold;
+		width: 100px;
+	}
+
+	&__header {
+		background-color: #0276ff;
+		padding: 15px 20px;
+		font-weight: 700;
+		color: #fff;
+	}
+
+	&__content {
+		padding: 30px;
+	}
+
+	&__number {
+		display: flex;
+		margin-bottom: 10px;
+
+		.label {
+			width: 220px;
+			font-weight: 700;
+		}
+	}
+
+	&__type {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 10px;
+
+		.type {
+			font-weight: bold;
+		}
+
+		.male {
+			display: flex;
+			align-items: center;
+
+			.form-control {
+				width: 100px;
+				margin-left: 5px;
+			}
+		}
+
+		.female {
+			display: flex;
+			align-items: center;
+
+			.form-control {
+				width: 100px;
+				margin-left: 5px;
+			}
+		}
+	}
+
+	&__remark {
+
+		display: flex;
+		margin-bottom: 20px;
+		margin-top: 20px;
+
+		.label {
+			font-weight: bold;
+			width: 100px;
+		}
+
+		.value {
+			flex: 1;
+		}
+	}
+}

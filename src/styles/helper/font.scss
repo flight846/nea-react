@@ -1,0 +1,42 @@
+@font-face {
+	font-family: $font;
+	src: url('../../assets/font/Lato-Regular.eot');
+	src: url('../../assets/font/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../../assets/font/Lato-Regular.woff') format('woff'),
+		url('../../assets/font/Lato-Regular.ttf') format('truetype');
+	// url('../../assets/font/Lato-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $fontBold;
+	src: url('../../assets/font/Lato-Bold.eot');
+	src: url('../../assets/font/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../../assets/font/Lato-Bold.woff') format('woff'),
+		url('../../assets/font/Lato-Bold.ttf') format('truetype');
+	// url('../../assets/font/Lato-Bold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+ 	font-family: $fontBoldItalic;
+ 	src: url('../../assets/font/Lato-BoldItalic.eot');
+ 	src: url('../../assets/font/Lato-BoldItalic.eot?#iefix') format('embedded-opentype'),
+ 		url('../../assets/font/Lato-BoldItalic.woff') format('woff'),
+ 		url('../../assets/font/Lato-BoldItalic.ttf') format('truetype');
+	//	url('../../assets/font/Lato-BoldItalic.svg') format('svg');
+ 	font-weight: normal;
+ 	font-style: normal;
+}
+
+@font-face {
+	font-family: $fontItalic;
+	src: url('../../assets/font/Lato-Italic.eot');
+	src: url('../../assets/font/Lato-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../../assets/font/Lato-Italic.woff') format('woff'),
+		url('../../assets/font/Lato-Italic.ttf') format('truetype');
+	// url('../../assets/font/Lato-Italic.svg') format('svg');
+	font-style: italic;
+}

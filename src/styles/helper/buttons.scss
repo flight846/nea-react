@@ -1,0 +1,66 @@
+/* BUTTONS
+-------------------------------------------------- */
+.btn { border-radius: .7rem; }
+.btn.btn-pri {
+	padding: 10px 15px;
+	border-radius: 10px;
+	background-color: $bg-blue;
+	color: $text-white;
+	font-size: $font_size_sm;
+	font-family: $fontBold;
+	display: inline-block;
+
+	&.full-width {
+		width: 100%;
+	}
+}
+
+.btn.btn-outline-primary {
+	background-color: $bg-white;
+	&:hover { color: $text-blue; background-color: $bg-light-grey; }
+}
+
+.btn.btn-sec {
+	padding: 10px 15px;
+	background-color: $bg-white;
+	color: $text-blue;
+	border: solid 1px $border-blue;
+	font-size: $font_size_sm;
+	font-family: $fontReg;
+	display: inline-block;
+
+	&.full-width {
+		width: 100%;
+	}
+}
+
+.btn.btn-light { padding: 10px 15px; background-color: transparent; border: none; }
+
+.actionBtns .btn-sec {
+	float: left;
+	width: 49%;
+
+	&:first-child {
+		margin-right: 2%;
+	}
+}
+
+.btn-group-toggle {
+	.btn { height: 36px; }
+	.btn-primary:not(.active) {
+		border-color: $text-light-grey2;
+		background-color: transparent;
+		color: $text-grey;
+	}
+}
+
+.badge {
+	padding: .4em 3em; margin-left: 1rem; border-radius: 12px; font-size: 100%; font-weight: normal; min-width: 202px;
+	&.badge-warning {
+		background-color: $bg-yellow;
+	}
+	&.badge-success {
+		background-color: $bg-light-green;
+	}
+	&.badge-light { border: 1px solid $border-black; background-color: transparent; }
+}

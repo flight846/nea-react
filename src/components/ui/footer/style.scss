@@ -1,0 +1,61 @@
+@import 'styles/var.scss';
+
+.footer {
+	&__main {
+		font-size: $font_size;
+		position: relative;
+
+		& .footer {
+			background-color: $bg-black;
+			color: $text-white;
+			padding: 50px 30px;
+			width: 100%;
+
+			@include max-lg {
+				padding: 30px;
+			}
+
+			& .footerTitle .title {
+				padding-bottom: 20px;
+				border-bottom: solid 2px $border-white;
+
+				@include max-lg {
+					padding-bottom: 15px;
+				}
+			}
+
+			& .footerLinks {
+				font-size: $font_size_sm;
+				margin-top: 20px;
+
+				@include max-lg {
+					margin-top: 15px;
+				}
+
+				& li {
+					display: inline-block;
+					padding-right: 20px;
+
+					& a {
+						color: $text-light-grey2;
+
+						&:hover {
+							color: $text-white;
+						}
+					}
+				}
+			}
+
+			& .footerCopyrights {
+				font-size: $font_size_sm;
+				text-align: right;
+				margin-top: 20px;
+				color: $text-light-grey2;
+
+				@include max-lg {
+					text-align: center;
+				}
+			}
+		}
+	}
+}

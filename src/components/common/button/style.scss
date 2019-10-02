@@ -1,0 +1,52 @@
+@import 'styles/var.scss';
+
+$button_border: #dadada;
+
+.steenify__btn {
+	text-transform: uppercase;
+	transition: all 0.3s ease-in-out;
+	display: inline-block;
+	border-radius: 8px;
+	font-weight: 500;
+	font-size: $font-size;
+	width: 95%;
+	max-width: 343px;
+	height: em(56px);
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	margin-bottom: em(10px);
+	border-radius: 8px;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $main_color;
+	}
+
+	&__link {
+		background: $nocolor;
+		border: none;
+		height: auto;
+	}
+
+	&__main {
+		border: none;
+		background: linear-gradient(90deg, $main_color 0%, $second_color 98.53%);
+		color: $white;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $white;
+			opacity: 0.8;
+		}
+	}
+
+	&__secondary {
+		background: $white;
+		border: 1px solid $button_border;
+		color: $main_color;
+	}
+}

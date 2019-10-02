@@ -1,0 +1,130 @@
+@import 'styles/var.scss';
+
+.nav {
+	&__main {
+		font-size: $font_size;
+		position: relative;
+
+		& .leftNavCont {
+			width: 220px;
+			position: fixed;
+			min-height: 100vh;
+			background-color: $bg-blue;
+
+			@include max-ml {
+				display: none;
+			}
+
+			& .leftNavTitle {
+				color: $text-white;
+				padding: 20px 20px 15px 20px;
+				border-bottom: solid 1px $border-white;
+				font-size: $font_size_xl;
+				line-height: 25px;
+			}
+
+			.leftNav {
+				margin-top: 10px;
+
+				& li {
+					color: $text-white;
+					padding: 12px 20px 10px 50px;
+					font-size: $font_size;
+					margin-bottom: 1px;
+
+					&.dashboard {
+						background: url(../../../assets/svg/dahboard.svg) no-repeat 20px 13px;
+					}
+
+					&.cPool {
+						background: url(../../../assets/svg/common-pool.svg) no-repeat 20px 13px;
+					}
+
+					&.workspace {
+						background: url(../../../assets/svg/workspace.svg) no-repeat 20px 13px;
+					}
+
+					&.qrySample {
+						background: url(../../../assets/svg/query-sample.svg) no-repeat 20px 13px;
+					}
+
+					&.rpt {
+						background: url(../../../assets/svg/report.svg) no-repeat 20px 13px;
+					}
+
+					&.active,
+					&:hover {
+						background-color: $bg-green;
+					}
+
+					& a {
+						display: block;
+						color: $text-white;
+					}
+				}
+			}
+		}
+
+		.ipadNavCont {
+			padding-top: 10px;
+
+			& .ipadNav {
+				position: relative;
+				top: 8px;
+
+				& span {
+					display: block;
+				    width: 30px;
+				    height: 3px;
+				    margin-bottom: 4px;
+				    background-color: $bg-blue2;
+				    transition: all 0.3s;
+
+				    &:first-child {
+						transform: rotate(45deg) translate(5px, 5px);
+					}
+
+					&:nth-child(2) {
+						background-color: transparent;
+					}
+					&:last-child {
+						transform: rotate(-45deg) translate(5px, -5px);
+					}
+				}
+			}
+		}
+
+		.menuWrapper {
+			position: absolute;
+			top: 107px;
+			width: 100%;
+			z-index: 99;
+			width: 94%;
+			left: 3%;
+
+			& .iMenu {
+				background-color: $bg-blue2;
+				color: $text-white;
+				padding: 10px 0;
+				-webkit-box-shadow: 0px 6px 11px 0px rgba(153,153,153,1);
+				-moz-box-shadow: 0px 6px 11px 0px rgba(153,153,153,1);
+				box-shadow: 0px 6px 11px 0px rgba(153,153,153,1);
+
+				& .iNavTitle {
+					border-bottom: solid 1px $border-white;
+					padding: 15px 20px;
+					font-size: $font_size_l;
+				}
+
+				& ul li {
+					padding: 15px 20px;
+					font-size: $font_size;
+
+					& a {
+						color: $text-white;
+					}
+				}
+			}
+		}
+	}
+}

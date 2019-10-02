@@ -1,0 +1,78 @@
+@import 'styles/var.scss';
+$notfound_color: #434343;
+$notfound_title_color: #212121;
+$notfound_btn_color: #40AADE;
+
+.notfound {
+	&__page {
+		font-size: em(15px);
+		line-height: em(18px);
+		color: $notfound_color;
+	}
+
+	&__content {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 0 em(71px) 0;
+		position: relative;
+
+		svg {
+			margin-bottom: em(15px, 15px);
+		}
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__title {
+		color: $notfound_title_color;
+		font-size: em(30px);
+		margin-bottom: 0;
+		font-weight: 600;
+	}
+
+	&__desc {
+		margin-bottom: 0;
+	}
+
+	&__btn {
+		line-height: em(19px);
+		background-color: $notfound_btn_color;
+		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.16);
+		border-radius: 8px;
+		color: $white;
+		width: percentage(1);
+		border: none;
+		height: 56px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 600;
+		margin-top: em(57px);
+
+		&:hover,
+		&:focus {
+			color: $white;
+		}
+	}
+
+	&__footer {
+		padding: 0 em(16px);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: percentage(1);
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+	}
+}

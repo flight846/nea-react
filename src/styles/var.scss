@@ -1,0 +1,110 @@
+// size
+$fullWidth: 100%;
+
+// font
+$font: 'LATORegular';
+$title: 'LATORegular';
+
+// base color
+$nocolor: transparent;
+$white: #ffffff;
+$black: #000000;
+
+
+// web color
+$main_color: #0BA5D3;
+$second_color: #4BADF3;
+$text_color: #000000;
+$title_color: #333333;
+$border_color: #E9F3F5;
+$border_color_1: #C9C9C9;
+$place_holder: #494949;
+$web_bg: #FAFAFA;
+$modal_border: #EEEEEE;
+
+
+/* FONT FAMILY
+-------------------------------------------------- */
+$fontReg: 'LATORegular';
+$fontBold: 'LATOBold';
+$fontBoldItalic: 'DINBoldItalic';
+$fontItalic: 'LATOItalic';
+
+
+/* FONT SIZES
+-------------------------------------------------- */
+$font_size_xxs: 11px;
+$font_size_xs: 12px;
+$font_size_sm: 14px;
+$font_size: 16px;
+$font_size_l: 18px;
+$font_size_xl: 20px;
+$font_size_xxl: 22px;
+$font_size_xxxl: 36px;
+
+
+/* TEXT COLORS
+-------------------------------------------------- */
+$text-black: #354052;
+$text-white: #FFFFFF;
+$text-light-grey: #F5F5F5;
+$text-light-grey2: #CACACA;
+$text-grey: #666666;
+$text-medium-grey: #757575;
+$text-blue: #0077FF;
+$text-dark-blue: #344152;
+$text-green: #7AC046;
+$text-orange: #FFA60E;
+$text-red: #D6004E;
+$text-magenta: #F7149F;
+
+
+/* BACKGROUND COLORS
+-------------------------------------------------- */
+$bg-black: #354052;
+$bg-white: #FFFFFF;
+$bg-offWhite: #f2f2f2;
+$bg-light-grey: #F5F5F5;
+$bg-light-blue: #E3F3FF;
+$bg-blue: #0077FF;
+$bg-blue2: #007BFF;
+$bg-skyBlue: #F0f5FB;
+$bg-skyBlue2: #E5F3FE;
+$bg-light-green: #8EC962;
+$bg-light-green2: #DDEECE;
+$bg-green: #7AC046;
+$border-light-grey2: #C2C5CA;
+$bg-light-orange: #FFD71E;
+$bg-orange: #FFA60E;
+$bg-yellow: #FFEF37;
+$bg-light-yellow: #FFFAC2;
+$bg-pink: #FFF5F6;
+
+
+/* BORDER COLORS
+-------------------------------------------------- */
+$border-black: #354052;
+$border-white: #FFFFFF;
+$border-light-grey: #F5F5F5;
+$border-light-grey2: #C2C5CA;
+$border-grey: #666666;
+$border-medium-grey: #757575;
+$border-blue: #0077FF;
+$border-green: #7AC046;
+$border-orange: #FFA60E;
+$border-rose: #D6004E;
+$border-magenta: #F7149F;
+
+
+/* SCREEN SIZES
+-------------------------------------------------- */
+$screen-xs: 400px;
+$screen-sm: 576px;
+$screen-md: 767px;
+$screen-lg: 991px;
+$screen-ml: 1024px;
+$screen-xl: 1200px;
+$screen-xxl: 1400px;
+
+
+@import './mixin.scss';

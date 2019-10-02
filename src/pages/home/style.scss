@@ -1,0 +1,10 @@
+@import 'styles/var.scss';
+
+.home {
+	&__page {
+		font-size: $font-size;
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+}

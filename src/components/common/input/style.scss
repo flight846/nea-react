@@ -1,0 +1,49 @@
+@import 'styles/var.scss';
+
+$form_color: #434343;
+$form_border: #e7e7e7;
+$form_label_color: #212121;
+
+.form-group {
+	&.form-group {
+		&--custom {
+			margin-bottom: em(17px, 15px);
+		}
+	}
+
+	&--custom {
+		font-size: em(16px, 14px);
+		line-height: em(20px, 15px);
+		position: relative;
+
+		label {
+			color: $form_label_color;
+			display: block;
+			margin-bottom: 4px;
+		}
+
+		.form-control {
+			font-size: em(16px, 14px);
+			width: 100%;
+			height: em(32px);
+			color: $form_color;
+			border: none;
+			border-radius: 0;
+			padding: 0;
+			border-bottom: 1px solid $form_border;
+			position: relative;
+			z-index: 2;
+			background-color: $nocolor;
+		}
+
+		.form-error {
+			border-bottom: 1px solid red !important;
+		}
+
+		.form-icon {
+			position: absolute;
+			bottom: 10px;
+			right: 0;
+		}
+	}
+}

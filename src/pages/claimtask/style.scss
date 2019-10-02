@@ -1,0 +1,58 @@
+@import 'styles/var.scss';
+
+.workspace {
+	&__main {
+		position: relative;
+		font-size: $font-size;
+	}
+
+	&__search {
+		display: flex;
+		margin-bottom: 5px;
+
+		.showList select {
+			height: 45px;
+		}
+
+		.searchWrapper {
+			width: 100%;
+			padding-left: 10px;
+		}
+	}
+
+	&__table {
+		position: relative;
+
+		.rt-thead {
+			border-bottom: solid 1px #dbdbdb;
+			box-shadow: 0px 10px 8px -9px #dbdbdb, 0px -9px 8px -10px #dbdbdb;
+			background-color: #fff;
+
+			.rt-th {
+				padding: 15px 20px;
+				// border-right: 0;
+			}
+		}
+
+		.rt-tbody {
+			.rt-td {
+				padding: 15px 10px;
+				// border-right: 0;
+			}
+
+			.rt-tr.-even {
+				background-color: #fff;
+			}
+		}
+	}
+
+	&__claim_button_container {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 32px;
+		.claimButton {
+			padding-left: 32px;
+			padding-right: 32px;
+		}
+	}
+}
