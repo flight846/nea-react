@@ -10,8 +10,13 @@
         max-width: 1000px;
         @include max-ml {
             margin: auto;
-            min-width: 300px;
-            max-width: 300px;
+            min-width: 400px;
+            max-width: 400px;
+		}
+		@include max-md {
+            margin: auto;
+            min-width: 320px;
+            max-width: 320px;
         }
     }
     .modal-header, .modal-body, .modal-content {
@@ -20,15 +25,45 @@
     }
 
     .modal-body { 
-        padding: 1.5rem; 
         @include max-ml {
             padding: 0;
         }
     }
     .modal-content {
-        @include max-ml {
-            padding: 1rem;
-        }
+        // @include max-ml {
+        //     padding: 1rem;
+		// }
+		
+		.system-modal {
+			.modal-footer {
+                border: none;
+                padding: 0;
+            }
+		}
+
+		.action-modal {
+			.modal-body { 
+				padding: 1.5rem; 
+				form { margin-bottom: 30px; }
+				.is-reject-form {
+					width: 420px;
+					@include max-ml {
+						width: 100%;
+					}
+				}
+				.slick-slider { padding: 0 30px; }
+				.slick-slide {
+					img { 
+						height: 287px; margin-bottom: 10px; 
+						@include max-md {
+							height: 145px;
+						}
+					}
+				}
+			}
+			.modal-header { display: none; }
+			.modal-footer { padding: 2rem; }
+		}
 
         .modal-reason {
             border: none;
@@ -39,21 +74,7 @@
 
         .modal-others {
             padding-left: 32px;
-            margin-bottom: 30px;
         }
-    }
-    &.system-modal {
-        
-        .modal-content { 
-            .modal-footer {
-                border: none;
-                padding: 0;
-            }
-
-        }
-    }
-    &.action-modal {
-        .modal-footer { padding: 1rem; }
     }
 }
 
@@ -72,7 +93,9 @@
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 			justify-content: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 	.form-group {
 		position: relative;
 		width: auto;

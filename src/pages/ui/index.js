@@ -14,9 +14,10 @@ import CustomModal from 'components/ui/modal';
 class Ui extends Component {
   state = {
     modalOpened: true,
+    modalType: 'action-modal'
   }
   render() {
-    const { modalOpened } = this.state;
+    const { modalOpened, modalType } = this.state;
 
     return (
       <Fragment>
@@ -33,7 +34,7 @@ class Ui extends Component {
             <ShowList />
             <Tables />
             <Footer />
-            <CustomModal className={{ position: 'modal-dialog-centered' }} show={modalOpened} />
+            <CustomModal className={'modal-dialog-centered'} show={modalOpened} type={modalType} />
           </div>
         </div>
       </Fragment>
