@@ -128,7 +128,7 @@
 					&.add-findings {
 							position: absolute; bottom: -90px; left: 0;
 							@include max-ml {
-									bottom: -1rem;
+									bottom: -5.5rem;
 							}
 					}
 			}
@@ -158,57 +158,6 @@
 		}
 	}
 }
-
-.tabsContainer {
-	padding: 0 30px;
-
-	.nav-tabs {
-		& ul li {
-			display: inline-block;
-			margin-right: 20px;
-			font-size: $font_size_xl;
-		}
-
-		& a {
-			padding: 10px 40px;
-		}
-		&.active a {
-			color: $bg-blue;
-			font-family: $fontBold;
-		}
-	}
-	.tab-content {
-		.tab-pane {
-			&:first-child {
-				.tab-pane__title {
-					border-bottom: 1px solid $border-light-grey;
-				}
-			}
-		}
-		.tab-pane__title { font-family: $fontBold; padding: 1.4rem 1.8rem; margin-bottom: 0; background-color: $bg-white;}
-	}
-	&.active a {
-		color: $bg-blue;
-		font-family: $fontBold;
-	}
-
-	@include max-ml {
-		padding: 0;
-	}
-}
-
-.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:hover {
-	background-color: transparent;
-	border-color: transparent;
-	border-bottom: solid 2px $border-blue;
-	color: $text-blue;
-	font-weight: bold;
-}
-
-
-
-
-
 
 // NEA Forms Styles
 select {
@@ -266,6 +215,11 @@ select.form-control[value]:not([value=""]) {
 	&.mt-1-tablet {
 		@include max-ml {
 			margin-top: 1rem;
+		}
+	}
+	.form-group {
+		&:not(:last-child) {
+			margin-bottom: 1rem;
 		}
 	}
 }

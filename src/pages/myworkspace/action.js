@@ -1,7 +1,7 @@
 // import { fakeRequest } from 'utils/request';
 import { searchAnalystTasks } from 'services';
 import { actionCreator } from 'utils';
-import { dataSuccess } from 'constants/fake-analyst-tasks';
+// import { dataSuccess } from 'constants/fake-analyst-tasks';
 
 export const ANALYST_TASK_SEARCH = actionCreator('ANALYST_TASK_SEARCH');
 export const analystTaskSearch = () => async dispatch => {

@@ -25,9 +25,11 @@ position: relative;
 	position: absolute;
 	right: 10px;
 	top: 13px;
-	width: 20px;
+	width: 25px;
 	z-index: 9;
 	cursor: pointer;
+	padding-left: 5px;
+	background-color: $bg-white;
 }
 
 @include max-lg {

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 import Header from 'components/ui/header';
 import NavBar from 'components/layout/navbar';
+import TabNav from 'components/ui/tabnav';
 import BreadCrumb from 'components/ui/breadcrumb';
 import Footer from 'components/ui/footer';
 import { ReactComponent as Search } from 'assets/svg/search.svg';
@@ -42,33 +43,8 @@ class Detailpage extends Component {
                 <a href="#">Back to Inspection ID: VC-20215-11700</a>
               </div>
               <div className="tabsContainer">
-                <Nav tabs>
-                  <NavItem>
-                    <NavLink
-                      className={classnames({ active: this.state.activeTab === '1' })}
-                      onClick={() => { this.toggle('1'); }}
-                    >
-                      Info
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={classnames({ active: this.state.activeTab === '2' })}
-                      onClick={() => { this.toggle('2'); }}
-                    >
-                      Analysis
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={classnames({ active: this.state.activeTab === '3' })}
-                      onClick={() => { this.toggle('3'); }}
-                    >
-                      Certification
-                    </NavLink>
-                  </NavItem>
-                </Nav>
-                <TabContent activeTab={this.state.activeTab}>
+                <TabNav onToggleTab={ (tab) => { this.toggle(tab) } } activeTab={ this.state.activeTab }/>
+                <TabContent activeTab={this.state.activeTab}  >
                   <TabPane tabId="1">
                     <p className="tab-pane__title text-bold">FORM 3 ID: 014989</p>
                     <div className="card bg-white">
@@ -591,7 +567,7 @@ class Detailpage extends Component {
                                   <div className="custom-control custom-checkbox marginBottom15">
                                     <input type="checkbox" className="custom-control-input" id="customCheck1" />
                                     <label className="custom-control-label" for="customCheck1">
-                                      <p className="font-weight-bold">Group 1</p>
+                                      <p className="font-weight-bold mb-0">Group 1</p>
                                       <p className="small-grey-text mb-0">Aloysius Tan</p>
                                       <p className="small-grey-text mb-0">Amily Tan</p>
                                     </label>
@@ -599,7 +575,7 @@ class Detailpage extends Component {
                                   <div className="custom-control custom-checkbox marginBottom15">
                                     <input type="checkbox" className="custom-control-input" id="customCheck2" />
                                     <label className="custom-control-label" for="customCheck2">
-                                      <p className="font-weight-bold">Group 2</p>
+                                      <p className="font-weight-bold mb-0">Group 2</p>
                                       <p className="small-grey-text mb-0">Aloysius Tan</p>
                                       <p className="small-grey-text mb-0">Amily Tan</p>
                                     </label>
@@ -607,7 +583,7 @@ class Detailpage extends Component {
                                   <div className="custom-control custom-checkbox marginBottom15">
                                     <input type="checkbox" className="custom-control-input" id="customCheck3" />
                                     <label className="custom-control-label" for="customCheck3">
-                                      <p className="font-weight-bold">Group 3</p>
+                                      <p className="font-weight-bold mb-0">Group 3</p>
                                       <p className="small-grey-text mb-0">Aloysius Tan</p>
                                       <p className="small-grey-text mb-0">Amily Tan</p>
                                     </label>

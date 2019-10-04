@@ -14,12 +14,12 @@
 	@include max-sm {
 		width: 100%;
 		padding: 25px 30px 10px 30px;
-	}	
+	}
 
 	&.navbar-expand .navbar-nav .dropdown-menu {
-	    -webkit-box-shadow: 0px 0px 18px 0px rgba(181,181,181,1);
-		-moz-box-shadow: 0px 0px 18px 0px rgba(181,181,181,1);
-		box-shadow: 0px 0px 18px 0px rgba(181,181,181,1);
+		-webkit-box-shadow: 0px 0px 18px 0px rgba(181, 181, 181, 1);
+		-moz-box-shadow: 0px 0px 18px 0px rgba(181, 181, 181, 1);
+		box-shadow: 0px 0px 18px 0px rgba(181, 181, 181, 1);
 		padding: 30px 20px 5px 20px;
 		margin: 0;
 		z-index: 100;
@@ -29,9 +29,9 @@
 
 		@include max-sm {
 			top: 170px;
-    		width: 90%;
-		}	
-	}	
+			width: 90%;
+		}
+	}
 
 	& .dropdown-toggle::after {
 		display: none;
@@ -39,7 +39,8 @@
 
 	& .nav-item.dropdown {
 		padding: 5px 10px;
-    }
+		margin-left: 8px;
+	}
 
 	& .nav-item.dropdown.show {
 		background-color: $bg-blue;
@@ -51,11 +52,11 @@
 		content: '';
 		/*background: url(../assets/svg/down-arrow.svg) no-repeat;*/
 		height: 25px;
-    	width: 30px;
-    	border: none;
-	    position: absolute;
-    	bottom: -30px;
-    	left: 34px;
+		width: 30px;
+		border: none;
+		position: absolute;
+		bottom: -30px;
+		left: 34px;
 	}
 
 	& .nav-item.dropdown.show a.nav-link {
@@ -86,21 +87,21 @@
 		}
 
 		& .dropdown-menu {
-		    right: 20px;
+			right: 20px;
 
-		    @include md-to-ml {
+			@include md-to-ml {
 				width: 95%;
-			}	
+			}
 
 			& .filterColsCont {
 				border-bottom: solid 1px $border-light-grey2;
 
 				& .filterCols {
-					width: 300px; 
-					height: 210px; 
-					padding:0 35px; 
-					margin-bottom: 35px; 
-					float: left; 
+					width: 300px;
+					height: 210px;
+					padding: 0 35px;
+					margin-bottom: 35px;
+					float: left;
 					border-right: solid 1px $border-light-grey2;
 
 					&:last-child {
@@ -111,23 +112,23 @@
 						width: 100%;
 						border-right: none;
 						padding: 0 15px;
-					}	
+					}
 
 					@include md-to-ml {
 						width: 50%;
-					}	
+					}
 				}
 			}
 
 			& .chkboxCont {
-				overflow-y: scroll; 
-				margin-top: 10px; 
-				height:120px;
+				overflow-y: scroll;
+				margin-top: 10px;
+				height: 120px;
 			}
 
 			& .filterBtnsCont {
 				padding: 20px 0;
-			    float: right;
+				float: right;
 
 				& .filterBtns {
 					float: left;
@@ -138,7 +139,7 @@
 					}
 				}
 			}
-	    }
+		}
 	}
 
 	/* Sort */
@@ -160,7 +161,7 @@
 			}
 
 			& .sortList li a {
-			    padding: 10px 20px 7px 20px;
+				padding: 10px 20px 7px 20px;
 
 				&:hover {
 					background-color: $bg-skyBlue2;
@@ -170,7 +171,7 @@
 			& .sortBtnsCont {
 				margin: 0 20px;
 				padding: 20px 0;
-			    border-top: solid 1px $border-light-grey2;
+				border-top: solid 1px $border-light-grey2;
 
 				& .sortBtns {
 					float: left;
@@ -184,3 +185,29 @@
 		}
 	}
 }
+
+
+// .searchWrapper {
+// 	position: relative;
+
+// 	& .searchTextfield {
+// 		width: 100%;
+// 		border-radius: 5px;
+// 		border: solid 1px $border-light-grey2;
+// 		padding: 10px;
+// 		font-size: $font_size;
+// 	}
+
+// 	& .searchIcon {
+// 		position: absolute;
+// 		right: 10px;
+// 		top: 13px;
+// 		width: 20px;
+// 		z-index: 9;
+// 		cursor: pointer;
+// 	}
+
+// 	@include max-lg {
+// 		width: 100%;
+// 	}
+// }

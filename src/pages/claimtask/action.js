@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { searchCommonPools, claimCommonPools } from 'services';
 import { actionCreator } from 'utils';
-//import { dataSuccess } from 'constants/fake-analyst-tasks';
+// import { dataSuccess } from 'constants/fake-analyst-tasks';
 
 export const HIDE_CLAIM_MODAL = 'HIDE_CLAIM_MODAL';
 export const hideClaimModal = () => dispatch => {

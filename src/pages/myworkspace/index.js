@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom';
 
 import Header from 'components/ui/header';
 import NavBar from 'components/layout/navbar';
-import BreadCrumb from 'components/ui/breadcrumb';
 import ShowList from 'components/ui/showlist';
 import Footer from 'components/ui/footer';
-import SampleStatus from 'components/ui/samplestatus';
 import Sort from 'components/common/sort';
 import Paging from 'components/common/pagination';
 import AuditTaskFilter from 'components/common/audit-task-filter';
@@ -189,12 +187,10 @@ class MyWorkspace extends Component {
         <div className="main-content workspace__main">
           <NavBar active="workspace" />
           <div className="contentWrapper">
-            <BreadCrumb />
             <div className="main-title">
               <h1>My Workspace</h1>
             </div>
             <div className="workspace__filter">
-
               <div className="filterWrapper">
                 <div className="row">
                   <div className="col-lg-7">
@@ -284,8 +280,6 @@ class MyWorkspace extends Component {
                 />
               </div>
             )}
-
-            <SampleStatus />
 
             <Footer />
           </div>

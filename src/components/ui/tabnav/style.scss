@@ -1,31 +1,48 @@
 @import 'styles/var.scss';
 
-.tab {
-	&__main {
-		font-size: $font_size;
-		position: relative;
+.tabsContainer {
+	padding: 0 30px;
 
-		.tabsContainer {
-			padding: 0 30px;
+	.nav-tabs {
+		& ul li {
+			display: inline-block;
+			margin-right: 20px;
+			font-size: $font_size_xl;
+		}
 
-			& ul li {
-				display: inline-block;
-				margin-right: 20px;
-				font-size: $font_size_xl;
-
-				&.active,
-				&:hover {
-					border-bottom: solid 2px $border-blue;
-				}
-			}
-
-			& a {
-				padding: 10px 30px;
-			}
-			&.active a {
-				color: $bg-blue;
-				font-family: $fontBold;
-			}	
+		& a {
+			padding: 10px 40px;
+		}
+		&.active a {
+			color: $bg-blue;
+			font-family: $fontBold;
 		}
 	}
+	.tab-content {
+		.tab-pane {
+			&:first-child {
+				.tab-pane__title {
+					border-bottom: 1px solid $border-light-grey;
+				}
+			}
+		}
+		.tab-pane__title { font-family: $fontBold; padding: 1.4rem 1.8rem; margin-bottom: 0; background-color: $bg-white;}
+	}
+	&.active a {
+		color: $bg-blue;
+		font-family: $fontBold;
+	}
+
+	@include max-ml {
+		padding: 0;
+	}
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:hover {
+	background-color: transparent;
+	border-color: transparent;
+	border-bottom: solid 2px $border-blue;
+	color: $text-blue!important;
+	font-weight: bold;
+	cursor: pointer;
 }
