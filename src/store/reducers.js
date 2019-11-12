@@ -1,8 +1,12 @@
 import update from 'react-addons-update';
 import { combineReducers } from 'redux';
+
+import { getData } from 'utils';
+
 import uiReducer from 'pages/ui/reducer';
-import myWorkspaceReducer from 'pages/myworkspace/reducer';
-import claimTaskReducer from 'pages/claimtask/reducer';
+import myWorkspaceReducers from 'modules/myWorkspace/reducer';
+import sampleIdentificationReducers from 'modules/sampleIdentification/reducer';
+import vectorInspectionReducers from 'modules/vectorInspection/reducer';
 import { GLOBAL_ACTIONS } from './actions';
 
 const initialState = {
@@ -10,6 +14,7 @@ const initialState = {
     loading: false,
     showMenu: false,
     fontSize: 16,
+    userRole: getData('userRole'),
   },
   data: {},
 };
@@ -22,10 +27,18 @@ const global = (state = initialState, action) => {
           showMenu: { $set: !state.ui.showMenu },
         },
       });
+
     case GLOBAL_ACTIONS.CHANGE_FONT_SIZE:
       return update(state, {
         ui: {
           fontSize: { $set: action.payload },
+        },
+      });
+
+    case GLOBAL_ACTIONS.UPDATE_USER_ROLE:
+      return update(state, {
+        ui: {
+          userRole: { $set: action.payload },
         },
       });
 
@@ -37,6 +50,7 @@ const global = (state = initialState, action) => {
 export default combineReducers({
   global,
   uiReducer,
-  myWorkspaceReducer,
-  claimTaskReducer,
+  myWorkspaceReducers,
+  sampleIdentificationReducers,
+  vectorInspectionReducers,
 });

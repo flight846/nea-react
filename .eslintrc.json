@@ -7,20 +7,32 @@
       }
     }
   },
-  "plugins": [
-    "react",
-    "jsx-a11y",
-    "import"
-  ],
+  "plugins": ["react", "jsx-a11y", "import"],
+  "parser": "babel-eslint",
   "rules": {
-    "react/jsx-filename-extension": [1, {
-      "extensions": [".js", ".jsx"]
-    }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
     "react/prop-types": [0],
     "jsx-a11y/label-has-for": [0],
     "arrow-parens": "off",
     "object-curly-newline": "off",
     "jsx-a11y/label-has-associated-control": "off",
-    "jsx-a11y/anchor-is-valid": "off"
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "no-nested-ternary": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "implicit-arrow-linebreak": "off",
+    "max-len": "off",
+    "no-shadow": "off",
+    "react/prefer-stateless-function": "off",
+    "operator-linebreak": "off",
+    "react/jsx-curly-newline": "off",
+    "no-underscore-dangle": "off"
   }
 }

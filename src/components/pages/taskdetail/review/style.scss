@@ -8,7 +8,7 @@
 		font-size: 28px;
 		line-height: 28px;
 		letter-spacing: -0.666667px;
-		color: #40445B;
+		color: $text-black;
 		margin-bottom: 40px;
 	}
 
@@ -65,14 +65,14 @@
 	}
 
 	&__loadmore {
-		border: 3px solid #D9E4F2;
+		border: 3px solid $border-grey;
 		box-sizing: border-box;
 		border-radius: 5px;
 		height: 104px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		color: #D9E4F2;
+		color: $text-light-grey2;
 		transition: all 0.3s ease-in-out;
 
 		&:hover {

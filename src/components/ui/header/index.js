@@ -18,7 +18,7 @@ class Header extends React.PureComponent {
   };
 
   render() {
-    const { className, toggleMenuAction, showMenu } = this.props;
+    const { className, toggleMenuAction, showMenu, userRole } = this.props;
     return (
       <header className={`header__main ${className || ''}`}>
         <div className="bg-light-grey govtSite">
@@ -33,43 +33,28 @@ class Header extends React.PureComponent {
         </div>
         <div className="header">
           <div className="container">
-            <div className="row paddingTop10 paddingBottom10">
-              <div className="col-md-3 col-lg-2">
+            <div className="row paddingTop15 paddingBottom15">
+              <div className="col-md-3 col-lg-2 col-6">
                 <a href="#" title="NEA">
                   <img src={common.logo} alt="NEA" className="logoImg" />
                 </a>
               </div>
-              <div className="col-md-9 col-lg-10 text-right">
+              <div className="col-md-9 col-lg-10 col-6 text-right">
                 <ul className="headerRHS">
                   <li>
                     <ul className="fontIncrease">
                       <li>
-                        <a
-                          className="smallFont"
-                          href="#"
-                          size={14}
-                          onClick={this.handleChangeFontSize}
-                        >
+                        <a className="smallFont" href="#" size={14} onClick={this.handleChangeFontSize}>
                           A
                         </a>
                       </li>
                       <li>
-                        <a
-                          className="mediumFont"
-                          href="#"
-                          size={16}
-                          onClick={this.handleChangeFontSize}
-                        >
+                        <a className="mediumFont" href="#" size={16} onClick={this.handleChangeFontSize}>
                           A
                         </a>
                       </li>
                       <li>
-                        <a
-                          className="bigFont"
-                          href="#"
-                          size={18}
-                          onClick={this.handleChangeFontSize}
-                        >
+                        <a className="bigFont" href="#" size={18} onClick={this.handleChangeFontSize}>
                           A
                         </a>
                       </li>
@@ -80,14 +65,13 @@ class Header extends React.PureComponent {
                     <div className="userName">Ben Wong</div>
                   </li>
                   <li>
+                    <div className="userName">{userRole}</div>
+                  </li>
+                  <li>
                     <Bell className="bellImg" />
                   </li>
                   <li className="ipadNavCont">
-                    <button
-                      type="button"
-                      className="btn-link header__toggle"
-                      onClick={toggleMenuAction}
-                    >
+                    <button type="button" className="btn-link header__toggle" onClick={toggleMenuAction}>
                       <div className={`ipadNav ${showMenu ? 'on' : ''}`}>
                         <span />
                         <span />
@@ -108,6 +92,7 @@ class Header extends React.PureComponent {
 const mapStateToProps = ({ global }, ownProps) => ({
   ...ownProps,
   showMenu: global.ui.showMenu,
+  userRole: global.ui.userRole,
 });
 const mapDispatchToProps = {
   toggleMenuAction: toggleMenu,

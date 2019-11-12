@@ -1,0 +1,22 @@
+@import 'styles/var.scss';
+
+.workspace {
+	&__main {
+		position: relative;
+		font-size: $font-size;
+	}
+
+	&__search {
+		display: flex;
+		margin-bottom: 5px;
+
+		.showList select {
+			height: 45px;
+		}
+
+		.searchWrapper {
+			width: 100%;
+			padding-left: 10px;
+		}
+	}
+}

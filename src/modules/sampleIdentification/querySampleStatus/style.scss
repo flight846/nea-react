@@ -1,0 +1,8 @@
+@import 'styles/var.scss';
+
+.workspace {
+	&__main {
+		position: relative;
+		font-size: $font-size;
+	}
+}

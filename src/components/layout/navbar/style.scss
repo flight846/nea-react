@@ -6,10 +6,11 @@
 		position: relative;
 
 		& .leftNavCont {
-			width: 220px;
+			width: 260px;
 			position: fixed;
-			min-height: 100vh;
+			height: 100vh;
 			background-color: $bg-blue;
+			overflow: auto;
 
 			@include max-ml {
 				display: none;
@@ -17,18 +18,17 @@
 
 			& .leftNavTitle {
 				color: $text-white;
-				padding: 20px 20px 15px 20px;
+				padding: 20px;
 				border-bottom: solid 1px $border-white;
 				font-size: $font_size_xl;
 				line-height: 25px;
 			}
 
 			.leftNav {
-				margin-top: 10px;
+				margin-top: 30px;
 
 				& li {
 					color: $text-white;
-					padding: 12px 20px 10px 50px;
 					font-size: $font_size;
 					margin-bottom: 1px;
 
@@ -55,12 +55,38 @@
 					&.active,
 					&:hover {
 						background-color: $bg-green;
+						& a {
+							color: #006FA0;
+						}
 					}
 
 					& a {
 						display: block;
 						color: $text-white;
+						padding: 11px 45px 9px 55px;
+						font-family: $fontBold;
+
+						&.downArrow {
+							background: url(../../../assets/svg/navArrow-down.svg) no-repeat;
+							background-position: right 15px top 16px;
+						}
+						&.upArrow {
+							background: url(../../../assets/svg/navArrow-up.svg) no-repeat;
+							background-position: right 15px top 16px;
+						}
 					}
+				}
+			}
+
+			.subNavCont {
+				background-color: $bg-bondi-blue;
+			}
+
+			.subNav {
+				& li a {
+					font-size: $font_size_sm;
+					font-family: $fontReg;
+					color: $text-white;
 				}
 			}
 		}
@@ -74,19 +100,20 @@
 
 				& span {
 					display: block;
-				    width: 30px;
-				    height: 3px;
-				    margin-bottom: 4px;
-				    background-color: $bg-blue2;
-				    transition: all 0.3s;
+					width: 30px;
+					height: 3px;
+					margin-bottom: 4px;
+					background-color: $bg-blue2;
+					transition: all 0.3s;
 
-				    &:first-child {
+					&:first-child {
 						transform: rotate(45deg) translate(5px, 5px);
 					}
 
 					&:nth-child(2) {
 						background-color: transparent;
 					}
+
 					&:last-child {
 						transform: rotate(-45deg) translate(5px, -5px);
 					}
@@ -106,9 +133,9 @@
 				background-color: $bg-blue2;
 				color: $text-white;
 				padding: 10px 0;
-				-webkit-box-shadow: 0px 6px 11px 0px rgba(153,153,153,1);
-				-moz-box-shadow: 0px 6px 11px 0px rgba(153,153,153,1);
-				box-shadow: 0px 6px 11px 0px rgba(153,153,153,1);
+				-webkit-box-shadow: 0px 6px 11px 0px rgba(153, 153, 153, 1);
+				-moz-box-shadow: 0px 6px 11px 0px rgba(153, 153, 153, 1);
+				box-shadow: 0px 6px 11px 0px rgba(153, 153, 153, 1);
 
 				& .iNavTitle {
 					border-bottom: solid 1px $border-white;

@@ -26,13 +26,13 @@ a:hover {
 }
 
 .main-content {
-	padding-top: 108px;
+	padding-top: 112px;
 }
 
 .contentWrapper {
 	background-color: $bg-skyBlue;
 	width: 100%;
-	padding-left: 220px;
+	padding-left: 260px;
 
 	@include max-ml {
 		padding-left: 0;
@@ -54,11 +54,22 @@ a:hover {
 }
 
 ::-webkit-scrollbar {
-	-webkit-appearance:none;
-	width:7px;
-	border: 1px solid $border-light-grey2;
+	-webkit-appearance: none;
+	width: 7px;
+	border: 1px solid $border-grey;
+	height: 3px;
 }
 ::-webkit-scrollbar-thumb {
 	background-color: $bg-blue;
-	-webkit-box-shadow:0 0 1px rgba(255,255,255,.5)
+	-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.mainBox {
+	border: solid 1px $border-grey;
+	background-color: $bg-white;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(191,191,191,1);
+-moz-box-shadow: 0px 0px 5px 0px rgba(191,191,191,1);
+box-shadow: 0px 0px 5px 0px rgba(191,191,191,1);
+	padding:30px;
+	margin: 30px;
 }

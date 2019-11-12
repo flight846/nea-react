@@ -4,29 +4,38 @@
 	padding: 0 30px;
 
 	.nav-tabs {
+		border-bottom: solid 2px $border-grey;
+
 		& ul li {
 			display: inline-block;
 			margin-right: 20px;
 			font-size: $font_size_xl;
+
 		}
 
 		& a {
 			padding: 10px 40px;
+			font-size: $font_size_l;
+			font-family: $fontBold;
+
+			@include max-md {
+				padding: 10px 20px;
+			}
 		}
 		&.active a {
 			color: $bg-blue;
 			font-family: $fontBold;
 		}
 	}
-	.tab-content {
-		.tab-pane {
-			&:first-child {
-				.tab-pane__title {
-					border-bottom: 1px solid $border-light-grey;
-				}
-			}
+	.tab-pane__group {
+		border-collapse: collapse; overflow: hidden; border-radius: 10px; margin-bottom: 40px; border: 1px solid $border-grey;
+		@include max-ml {
+			margin: 0 30px 30px 30px;
 		}
-		.tab-pane__title { font-family: $fontBold; padding: 1.4rem 1.8rem; margin-bottom: 0; background-color: $bg-white;}
+	}
+	.tab-content {
+		margin-top: 30px;
+		.tab-pane__title { font-family: $fontBold; font-size: $font_size_l; padding: 17px 30px; margin-bottom: 0; background-color: $bg-blue; color: $text-white; }
 	}
 	&.active a {
 		color: $bg-blue;
@@ -41,8 +50,8 @@
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:hover {
 	background-color: transparent;
 	border-color: transparent;
-	border-bottom: solid 2px $border-blue;
-	color: $text-blue!important;
-	font-weight: bold;
+	border-bottom: solid 2px $border-bondi-blue;
+	color: $text-bondi-blue!important;
+	font-family: $fontBold;
 	cursor: pointer;
 }

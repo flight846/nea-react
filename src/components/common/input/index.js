@@ -2,12 +2,10 @@
 import React from 'react';
 import './style.scss';
 
-const Input = (props) => {
-  const {
-    onChange, className, name, id, type, label, placeholder, tag, value,
-  } = props;
+const Input = props => {
+  const { onChange, className, name, id, type, label, placeholder, tag, value } = props;
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     onChange(e.target.value);
   };
 

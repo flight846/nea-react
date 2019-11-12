@@ -14,7 +14,7 @@ a:focus {
 img,
 iframe,
 video {
-	max-width: 100%
+	max-width: 100%;
 }
 
 table {
@@ -49,51 +49,50 @@ fieldset legend {
 
 ::-webkit-selection {
 	background: $second_color;
-	color: $white;
+	color: $text-white;
 }
 
 ::-moz-selection {
 	background: $second_color;
-	color: $white;
+	color: $text-white;
 }
 
 ::selection {
 	background: $second_color;
-	color: $white;
+	color: $text-white;
 }
 
 ::-webkit-input-placeholder {
-	-webkit-transition: text-indent .5s ease, color .5s ease;
-	transition: text-indent .5s ease, color .5s ease;
-	color: #969696
+	-webkit-transition: text-indent 0.5s ease, color 0.5s ease;
+	transition: text-indent 0.5s ease, color 0.5s ease;
+	color: #969696;
 }
 
 input::-moz-placeholder {
-	-webkit-transition: text-indent .5s ease, color .5s ease;
-	transition: text-indent .5s ease, color .5s ease;
-	color: #969696
+	-webkit-transition: text-indent 0.5s ease, color 0.5s ease;
+	transition: text-indent 0.5s ease, color 0.5s ease;
+	color: #969696;
 }
 
 input::ms-input-placeholder {
-	-webkit-transition: text-indent .5s ease, color .5s ease;
-	transition: text-indent .5s ease, color .5s ease;
-	color: #969696
+	-webkit-transition: text-indent 0.5s ease, color 0.5s ease;
+	transition: text-indent 0.5s ease, color 0.5s ease;
+	color: #969696;
 }
 
 [placeholder]:focus::-webkit-input-placeholder {
 	text-indent: 10em;
-	color: transparent
+	color: transparent;
 }
 
 [placeholder]:focus::-moz-placeholder {
 	text-indent: 10em;
-	color: transparent
+	color: transparent;
 }
-
 
 body,
 html {
-	font-family: $font, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: $font, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: $text_color;
 	background: $web_bg;
 	font-size: $font_size;
@@ -165,7 +164,7 @@ select {
 	height: 40px;
 	background-repeat: no-repeat;
 	background-position: center center;
-	color: $white;
+	color: $text-white;
 
 	&:hover {
 		opacity: 0.8;
@@ -194,7 +193,7 @@ select {
 		border: 1px solid $nocolor;
 		box-sizing: border-box;
 		border-radius: 100%;
-		background: #AEAEAE;
+		background: #aeaeae;
 		margin: 5px;
 	}
 
@@ -228,7 +227,6 @@ select {
 	}
 }
 
-
 // fix bootstrap modal bug
 body {
 	padding-right: 0px !important;
@@ -237,3 +235,4 @@ body {
 body {
 	min-height: 100vh;
 }
+

@@ -11,10 +11,10 @@ const Footer = props => {
   return (
     <div className={`footer__main ${className || ''}`}>
       <div className="footer">
-        
+
           <div className="row">
             <div className="col-md-12 footerTitle">
-              <div className="bold-font title">Vector Control System 2</div>
+              <div className="bold-font">Vector Control System 2</div>
             </div>
           </div>
           <div className="row">

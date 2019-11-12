@@ -1,0 +1,24 @@
+@import 'styles/var.scss';
+
+
+.cardWrapper{
+	& .cardTitle {
+		padding: 10px 30px;
+	}
+
+	& .cardDesc {
+		padding: 30px;
+	}
+}
+
+.habitatTbl,
+.habitatTbl tr {
+	border: solid 1px $border-grey;
+}
+
+.remarksCont {
+	padding: 20px 30px 18px 30px;
+	border: solid 1px $border-grey;
+}
+
+

@@ -1,8 +1,6 @@
-// import { fakeRequest } from 'utils/request';
 import axios from 'axios';
 import { searchCommonPools, claimCommonPools } from 'services';
 import { actionCreator } from 'utils';
-// import { dataSuccess } from 'constants/fake-analyst-tasks';
 
 export const HIDE_CLAIM_MODAL = 'HIDE_CLAIM_MODAL';
 export const hideClaimModal = () => dispatch => {
@@ -69,7 +67,6 @@ export const commonPoolSearch = () => async dispatch => {
     });
 
     const { status, data } = await searchCommonPools();
-    //const data = dataSuccess;
 
     if (status === 200 && data.status === 'Pass') {
       dispatch({
@@ -97,9 +94,7 @@ export const commonPoolFilter = data => (dispatch, getState) => {
   } = getState();
   const filteredList = taskList
     .filter(item => {
-      let checkSearch = item[data.searchType]
-        .toLowerCase()
-        .includes(data.searchText.toLowerCase());
+      let checkSearch = item[data.searchType].toLowerCase().includes(data.searchText.toLowerCase());
       const { divisions, premises } = data.filterValue;
       if (divisions.length > 0 && !divisions.includes('All')) {
         checkSearch = checkSearch && divisions.includes(item.divisionCd);

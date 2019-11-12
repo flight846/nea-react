@@ -6,7 +6,7 @@
 		position: relative;
 
 		.showListCont {
-			padding: 12px 30px;
+			padding: 20px 0;
 
 			.showingTxt {
 				display: inline-block;
@@ -15,23 +15,68 @@
 			}
 
 			.showList {
-				width: 110px;
+				width: 130px;
 				display: inline-block;
+				position: relative;
 				margin-bottom: 0;
 
-				& select {
-				    font-size: $font_size;
-				    height: 50px;
-				    border-radius: 7px;
-				    color: $text-blue;
+				&:after {
+					content: '';
+					background: url(../../../assets/svg/down-arrow.svg) no-repeat;
+					display: block;
+					position: absolute;
+					top: 50%;
+					right: 20px;
+					width: 16px;
+					height: 16px;
+					background-size: 16px 16px;
+					transform: translateY(-50%);
+				}
 
-				    &:focus {
+				& select {
+					font-size: $font_size;
+					height: 50px;
+					border-radius: 7px;
+					color: $text-blue;
+
+					&:focus {
 						box-shadow: none;
 						border-color: $border-blue;
 					}
 				}
 			}
 		}
-		
+	}
+}
+.showList {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 0;
+	border-radius: 10px;
+
+	&:after {
+		content: '';
+		background: url(../../../assets/svg/down-arrow.svg) no-repeat;
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		width: 16px;
+		height: 16px;
+		background-size: 16px 16px;
+		transform: translateY(-50%);
+	}
+
+	& select {
+		padding: 0 40px 0 20px !important;
+		font-size: $font_size;
+		height: 50px;
+		border-radius: 7px;
+		color: $text-blue;
+
+		&:focus {
+			box-shadow: none;
+			border-color: $border-blue;
+		}
 	}
 }

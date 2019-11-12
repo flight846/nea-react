@@ -1,4 +1,3 @@
-
 /*.main-content {
 	padding-top: 108px;
 }*/
@@ -162,7 +161,7 @@
 .main-title {
 	//padding: 15px 30px 35px 30px;
 	padding: 35px 30px 35px 30px;
-} 
+}
 
 .main-title h1 {
 	// font-family: 'LATOBold';
@@ -194,64 +193,70 @@
 	font-weight: bold;
 }*/
 
-/*.filterWrapper {
-	background-color: #fff;
-	padding: 15px 30px;
-}
+.filterWrapper {
+	// background-color: $bg-white;
 
-.searchWrapper {
-	position: relative;
-}
+	tabsContainer {
+		border-bottom: none;
 
-.searchWrapper .searchTextfield {
-	width: 100%;
-	border-radius: 5px;
-	border: solid 1px #ccc;
-	padding: 10px;
-	font-size: 16px;
-}
+		.nav-link {
+			background-color: $bg-light-grey1;
+			color: $bg-black;
+			border-radius: 10px;
+			height: 45px;
 
-.searchWrapper .searchIcon {
-	position: absolute;
-	right: 10px;
-	top: 13px;
-	width: 20px;
-	z-index: 9;
-	cursor: pointer;
-}
+			&:hover {
+				border-bottom: none;
+				color: $bg-black !important;
+				font-weight: normal;
+			}
 
-.filterWrapper .filterSortWrapper {
-	padding-top: 10px;
-	text-align: right;
-}
-
-.filterWrapper .filterCont,
-.filterWrapper .sortCont {
-	display: inline-block;
-	font-size: 16px;
-}
-
-.filterWrapper .sortCont svg,
-.filterWrapper .filterCont svg {
-	padding-left: 10px;
-	width: 30px;
-}
-
-.filterWrapper .filterCont {
-	display: inline-block;
-	padding-right: 50px;
-}
-
-@media (max-width: 991px) {
-	.searchWrapper {
-		width: 100%;
+			&.active {
+				background-color: $bg-blue;
+				color: $bg-white !important;
+			}
+		}
 	}
 
-	.filterWrapper .filterSortWrapper {
-		text-align: left;
-		padding-top: 15px;
+	& .filterSortWrapper {
+		padding-top: 10px;
+		text-align: right;
+
+		@include max-lg {
+			text-align: left;
+			padding-top: 15px;
+		}
 	}
-}*/
+
+	& .filterCont {
+		display: inline-block;
+		font-size: $font_size;
+		padding-right: 50px;
+
+		& svg {
+			padding-left: 10px;
+			width: 30px;
+		}
+	}
+	& .sortCont {
+		display: inline-block;
+		font-size: $font_size;
+
+		& svg {
+			padding-left: 10px;
+			width: 30px;
+		}
+
+		& .btn-link {
+			text-decoration: none;
+			color: $text-black;
+
+			&:hover {
+				border: solid 1px #fff;
+			}
+		}
+	}
+}
 
 /*.showListCont {
 	padding: 12px 30px;
@@ -283,11 +288,12 @@
 
 .tblCompo {
 	font-size: 16px;
-	margin-bottom: 50px;
 	overflow-x: auto;
 }
 
 .tblCompo .actionBtns {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -394,6 +400,7 @@
 .tblCompo .tbl-headings {
 	border-top: solid 1px #dbdbdb;
 	border-bottom: solid 1px #dbdbdb;
+	-webkit-box-shadow: 0px 10px 8px -9px #dbdbdb, 0px -9px 8px -10px #dbdbdb;
 	box-shadow: 0px 10px 8px -9px #dbdbdb, 0px -9px 8px -10px #dbdbdb;
 	background-color: #fff;
 }
@@ -419,35 +426,41 @@
 
 .paginationCont ul li {
 	display: inline-block;
-	margin: 0 7px;
-	font-size: 16px;
+	margin: 0 10px;
+	font-family: $fontBold;
 }
 
-.paginationCont ul li.active {
-	background-color: #0077ff;
-	border-radius: 15px;
+.paginationCont ul li a {
+	color: $text-medium-grey;
 }
 
 .paginationCont ul li.active a {
-	color: #fff;
-	padding: 3px 10px;
+	color: $text-bondi-blue;
 }
 
 .paginationCont ul li:first-child {
-	padding-right: 20px;
-	color: #0077ff;
+	padding-right: 2px;
+	color: $text-bondi-blue;
 }
 
 .paginationCont ul li:last-child {
-	padding-left: 20px;
-	color: #0077ff;
+	padding-left: 2px;
+	color: $text-bondi-blue;
 }
 
 .paginationCont ul li:first-child a,
 .paginationCont ul li:last-child a {
-	color: #0077ff;
+	color: $text-bondi-blue;
 }
 
 .popover {
 	max-width: 600px;
 }
+
+.form-inline { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -webkit-box-flex: 1; -ms-flex: 1 0 auto; flex: 1 0 auto; }
+.form-inline .form-control { width: 100%; }
+.form-inline label { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; }
+.form-inline .form-group__stacked { position: relative; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; margin-right: 30px; }
+.form-inline .form-group label { margin-bottom: 10px; }
+.form-group.form-group__stacked .searchIcon { position: absolute; right: 10px; top: 40px; width: 20px; z-index: 9; cursor: pointer;}
+.input-group-prepend select.form-control { border-top-right-radius: 0; border-bottom-right-radius: 0; }

@@ -26,22 +26,24 @@
 		.rt-thead {
 			border-bottom: solid 1px #dbdbdb;
 			box-shadow: 0px 10px 8px -9px #dbdbdb, 0px -9px 8px -10px #dbdbdb;
-			background-color: #fff;
+			background-color: $bg-white;
+			font-size: $font_size_l;
 
 			.rt-th {
 				padding: 15px 20px;
 				// border-right: 0;
+				text-align: left;
 			}
 		}
 
 		.rt-tbody {
 			.rt-td {
-				padding: 15px 10px;
+				padding: 15px 20px;
 				// border-right: 0;
 			}
 
 			.rt-tr.-even {
-				background-color: #fff;
+				background-color: $bg-white;
 			}
 		}
 	}
@@ -53,6 +55,35 @@
 		.claimButton {
 			padding-left: 32px;
 			padding-right: 32px;
+		}
+	}
+}
+
+.tab {
+	&__main {
+		font-size: $font_size;
+		position: relative;
+
+		.tabsContainer {
+			padding: 0 30px;
+
+			& ul li {
+				display: inline-block;
+				margin-right: 20px;
+				font-size: $font_size_xl;
+
+				&.active {
+					border-bottom: solid 2px $border-blue;
+				}
+			}
+
+			& a {
+				padding: 10px 30px;
+			}
+			&.active a {
+				color: $text-blue;
+				font-family: $fontBold;
+			}
 		}
 	}
 }

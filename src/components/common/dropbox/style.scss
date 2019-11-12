@@ -1,0 +1,54 @@
+@import 'styles/var.scss';
+
+.checkout_dropbox {
+	font-size: $font_size;
+
+	&.is-dragover {
+		background-color: #3f445b;
+	}
+
+	&.ishidden {
+		display: none;
+	}
+
+	&__content {
+		border: 2px dashed #D9E4F2;
+		border-radius: 10px;
+		min-height: 200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__label {
+		display: flex;
+		text-align: center;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		span {
+			margin-top: em(24px, 20px);
+			font-weight: bold;
+			font-size: em(20px);
+			line-height: em(20px);
+			text-align: center;
+			letter-spacing: -0.477778px;
+			color: $text-medium-grey;
+		}
+
+		svg {
+			max-width: 100%;
+			fill: $text-medium-grey;
+		}
+
+	}
+
+	&__dropzone {
+		max-width: 100%;
+	}
+
+	@include max-sm() {
+		padding: em(20px);
+	}
+}

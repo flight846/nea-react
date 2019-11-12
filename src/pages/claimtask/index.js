@@ -2,6 +2,10 @@
 /* eslint-disable react/jsx-fragments */
 import React, { Fragment, Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import ReactTable from 'react-table';
+import { debounce, difference } from 'lodash';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 import Header from 'components/ui/header';
 import NavBar from 'components/layout/navbar';
@@ -9,18 +13,12 @@ import ShowList from 'components/ui/showlist';
 import Footer from 'components/ui/footer';
 import Sort from 'components/common/sort';
 import Paging from 'components/common/pagination';
+import InPageLoading from 'components/common/inPageLoading';
 import AuditTaskFilter from 'components/common/audit-task-filter';
-import { connect } from 'react-redux';
-import ReactTable from 'react-table';
-import { debounce, difference } from 'lodash';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { toast } from 'react-toastify';
+
 import { ReactComponent as SearchIcon } from 'assets/svg/search.svg';
-import {
-  commonPoolSearch,
-  commonPoolFilter,
-  commonPoolClaim,
-  hideClaimModal,
-} from './action';
+import { commonPoolSearch, commonPoolFilter, commonPoolClaim, hideClaimModal } from './action';
 
 import './style.scss';
 
@@ -201,7 +199,7 @@ class ClaimTask extends Component {
     const { selectedTask } = this.state;
     const { commonPoolClaimAction } = this.props;
     if (selectedTask.length === 0) {
-      alert('Please select any tasks first.');
+      toast.error('Please select any tasks first.');
     } else {
       commonPoolClaimAction(selectedTask);
     }
@@ -228,15 +226,10 @@ class ClaimTask extends Component {
       fontSize,
     } = this.props;
 
-    let doubleCheckSelectingAll = this.checkSelectAll(
-      selectedTask,
-      filteredTaskList,
-    );
+    let doubleCheckSelectingAll = this.checkSelectAll(selectedTask, filteredTaskList);
     console.log(doubleCheckSelectingAll, isSelectingAllTask);
     doubleCheckSelectingAll =
-      doubleCheckSelectingAll === isSelectingAllTask
-        ? isSelectingAllTask
-        : doubleCheckSelectingAll;
+      doubleCheckSelectingAll === isSelectingAllTask ? isSelectingAllTask : doubleCheckSelectingAll;
 
     const columns = [
       {
@@ -368,62 +361,39 @@ class ClaimTask extends Component {
               totalItems={filteredTaskList.length}
               onChangePageSize={this.onChangePageSize}
             />
-            {isLoading ? (
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  height: 300,
-                }}
-              >
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
-                  <div className="lds-ripple">
-                    <div />
-                    <div />
-                  </div>
-                  <span>Loading</span>
-                </div>
+            <div className="workspace__table" style={{ fontSize: `${fontSize}px` }}>
+              <ReactTable
+                data={filteredTaskList}
+                columns={columns}
+                page={page}
+                pageSize={pageSize}
+                showPagination={false}
+                sorted={[sortValue]}
+                sortable={false}
+                style={{ marginBottom: 16 }}
+              />
+              <Paging
+                number={page}
+                totalPages={filteredTaskList.length / pageSize}
+                onClickPager={this.onChangePage}
+              />
+              <div className="workspace__claim_button_container">
+                <Button
+                  className="claimButton"
+                  outline
+                  size="lg"
+                  color="primary"
+                  onClick={this.onClaimTasks}
+                >
+                  Claim Tasks
+                </Button>
               </div>
-            ) : (
-              <div
-                className="workspace__table"
-                style={{ fontSize: `${fontSize}px` }}
-              >
-                <ReactTable
-                  data={filteredTaskList}
-                  columns={columns}
-                  page={page}
-                  pageSize={pageSize}
-                  showPagination={false}
-                  sorted={[sortValue]}
-                  sortable={false}
-                  style={{ marginBottom: 16 }}
-                />
-                <Paging
-                  number={page}
-                  totalPages={filteredTaskList.length / pageSize}
-                  onClickPager={this.onChangePage}
-                />
-                <div className="workspace__claim_button_container">
-                  <Button
-                    className="claimButton"
-                    outline
-                    size="lg"
-                    color="primary"
-                    onClick={this.onClaimTasks}
-                  >
-                    Claim Tasks
-                  </Button>
-                </div>
-              </div>
-            )}
+            </div>
+            <InPageLoading isLoading={isLoading} />
             <Footer />
           </div>
           <Modal isOpen={showClaimModal} toggle={this.toggleClaimModal}>
-            <ModalHeader toggle={this.toggleClaimModal}>
-              Claim Result
-            </ModalHeader>
+            <ModalHeader toggle={this.toggleClaimModal}>Claim Result</ModalHeader>
             <ModalBody>
               {claimFailedTasks.length === 0 ? (
                 'Successfully claimed selected tasks'

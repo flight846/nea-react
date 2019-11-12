@@ -4,7 +4,7 @@ const defautToken = '';
 
 const hostConfigs = {
   development: {
-    HostAPI: 'https://virtserver.swaggerhub.com',
+    HostAPI: 'http://104.215.187.41:8080',
     grantType: 'Bearer',
     defautToken: '',
   },
@@ -20,4 +20,15 @@ const hostConfigs = {
   },
 };
 
-export { HostAPI, grantType, defautToken, hostConfigs };
+const UserRole = {
+  Admin: 'Admin',
+  EHI_Analyst: 'EHI_Analyst',
+  EHI_Admin: 'EHI_Admin',
+  RO_Officer: 'RO_Officer',
+  RO_TL: 'RO_TL',
+  Manager: 'Manager',
+  RCU_Officer: 'RCU_Officer',
+  RCU_TL: 'RCU_TL',
+};
+
+export { HostAPI, grantType, defautToken, hostConfigs, UserRole };

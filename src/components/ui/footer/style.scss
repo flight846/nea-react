@@ -8,16 +8,16 @@
 		& .footer {
 			background-color: $bg-black;
 			color: $text-white;
-			padding: 50px 30px;
+			padding: 16.6px 30px;
 			width: 100%;
 
 			@include max-lg {
 				padding: 30px;
 			}
 
-			& .footerTitle .title {
-				padding-bottom: 20px;
-				border-bottom: solid 2px $border-white;
+			& .footerTitle .bold-font {
+				padding-bottom: 10px;
+				border-bottom: solid 1px rgba(255, 255, 255, 0.5);
 
 				@include max-lg {
 					padding-bottom: 15px;
@@ -26,7 +26,7 @@
 
 			& .footerLinks {
 				font-size: $font_size_sm;
-				margin-top: 20px;
+				margin-top: 10px;
 
 				@include max-lg {
 					margin-top: 15px;
@@ -37,7 +37,7 @@
 					padding-right: 20px;
 
 					& a {
-						color: $text-light-grey2;
+						color: rgba(255, 255, 255, 0.5);
 
 						&:hover {
 							color: $text-white;
@@ -49,8 +49,8 @@
 			& .footerCopyrights {
 				font-size: $font_size_sm;
 				text-align: right;
-				margin-top: 20px;
-				color: $text-light-grey2;
+				margin-top: 10px;
+				color: rgba(255, 255, 255, 0.5);
 
 				@include max-lg {
 					text-align: center;

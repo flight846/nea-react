@@ -17,8 +17,9 @@
 		font-size: em(26px);
 		line-height: 1.3;
 		text-align: center;
-		color: #212121;
+		color: $text-black;
 		margin-bottom: em(30px, 30px);
+
 	}
 
 	&__des {
@@ -26,6 +27,6 @@
 		font-size: em(15px);
 		line-height: 1.2;
 		text-align: center;
-		color: #434343;
+		color: $text-medium-grey;
 	}
 }

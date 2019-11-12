@@ -4,79 +4,118 @@
 	&__main {
 		font-size: $font_size;
 		position: relative;
-
-
 	}
 }
 
-
 .searchWrapper {
-position: relative; 
+	position: relative;
 
-& .searchTextfield {
-	width: 100%;
-	border-radius: 5px;
-	border: solid 1px $border-light-grey2;
-	padding: 10px; 
-	font-size: $font_size;
-}
+	& .searchTextfield {
+		width: 100%;
+		border-radius: 10px;
+		border: solid 1px $border-grey;
+		padding: 10px;
+		font-size: $font_size;
 
-& .searchIcon {
-	position: absolute;
-	right: 10px;
-	top: 13px;
-	width: 25px;
-	z-index: 9;
-	cursor: pointer;
-	padding-left: 5px;
-	background-color: $bg-white;
-}
+		&.navtab-search {
+			width: calc(100% - 205px);
+		}
+	}
 
-@include max-lg {
-	width: 100%;
-}
+	& .searchIcon {
+		position: absolute;
+		right: 10px;
+		top: 13px;
+		width: 25px;
+		z-index: 9;
+		cursor: pointer;
+		padding-left: 5px;
+		background-color: $bg-white;
+	}
+
+	@include max-lg {
+		width: 100%;
+	}
 }
 
 .filterWrapper {
-background-color: $bg-white;
-padding: 15px 30px;
+	background-color: $bg-white;
 
-& .filterSortWrapper {
-	padding-top: 10px;
-	text-align: right;
+	.nav-tabs {
+		&.navtab-tabs {
+			border-bottom: none;
+			float: left;
 
-	@include max-lg {
-		text-align: left;
-		padding-top: 15px;
-	}
-}
+			.nav-link {
+				background-color: $bg-light-grey2;
+				color: $text-black;
+				border-radius: 10px;
+				height: 45px;
 
-& .filterCont {
-	display: inline-block;
-	font-size: $font_size;
-	padding-right: 50px;
+				&:hover {
+					border-bottom: none;
+					color: $text-black !important;
+					font-weight: normal;
+				}
 
-	& svg {
-		padding-left: 10px;
-		width: 30px;
-	}
-}
-& .sortCont {
-	display: inline-block;
-	font-size: $font_size;
-
-	& svg {
-		padding-left: 10px;
-		width: 30px;
-	}
-
-	& .btn-link {
-		text-decoration:none;
-		color: $text-black;
-
-		&:hover{
-			border:solid 1px #fff;
+				&.active {
+					background-color: $bg-blue;
+					color: $text-white !important;
+				}
+			}
 		}
 	}
-}
+
+	.navtab-select {
+		float: left;
+		width: 205px;
+		height: 43px;
+
+		.form-control {
+			height: 46px;
+		}
+
+		&:after {
+			right: 20px !important;
+		}
+	}
+
+	& .filterSortWrapper {
+		padding-top: 10px;
+		text-align: right;
+
+		@include max-lg {
+			text-align: left;
+			padding-top: 15px;
+		}
+	}
+
+	& .filterCont {
+		display: inline-block;
+		font-size: $font_size;
+		padding-right: 50px;
+
+		& svg {
+			padding-left: 10px;
+			width: 30px;
+		}
+	}
+	& .sortCont {
+		display: inline-block;
+		font-size: $font_size;
+
+		& svg {
+			padding-left: 10px;
+			width: 30px;
+		}
+
+		& .btn-link {
+			text-decoration: none;
+			color: $text-black;
+
+			&:hover {
+				border: solid 1px #fff;
+			}
+		}
+	}
 }

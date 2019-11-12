@@ -4,7 +4,7 @@
 import React from 'react';
 import { ReactComponent as Close } from 'assets/svg/close.svg';
 
-import Dropbox from '../dropbox';
+import Dropbox from '../../../common/dropbox';
 import Review from '../review';
 
 import './style.scss';

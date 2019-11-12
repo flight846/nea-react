@@ -16,6 +16,7 @@ const API = {
 
 export const authenticateTokenService = token =>
   request({
+    host: 'https://virtserver.swaggerhub.com',
     url: API.AUTHENTICATE_TOKEN,
     method: 'POST',
     data: { token },
@@ -30,6 +31,7 @@ export const getListTasksClaim = (
   },
 ) =>
   request({
+    host: 'https://virtserver.swaggerhub.com',
     url: API.GET_LIST_TASKS_CLAIM,
     method: 'POST',
     data,
@@ -44,6 +46,7 @@ export const searchAnalystTasks = (
   },
 ) =>
   request({
+    host: 'https://virtserver.swaggerhub.com',
     url: API.ANALYST_TASK_SEARCH,
     method: 'POST',
     data,
@@ -58,6 +61,7 @@ export const searchCommonPools = (
   },
 ) =>
   request({
+    host: 'https://virtserver.swaggerhub.com',
     url: API.COMMON_POOL_SEARCH,
     method: 'POST',
     data,
@@ -69,6 +73,7 @@ export const claimCommonPools = (
   },
 ) =>
   request({
+    host: 'https://virtserver.swaggerhub.com',
     url: API.COMMON_POOL_CLAIM,
     method: 'POST',
     data,

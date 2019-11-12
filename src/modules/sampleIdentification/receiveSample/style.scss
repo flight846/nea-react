@@ -1,0 +1,80 @@
+@import 'styles/var.scss';
+
+.workspace {
+	&__main {
+		position: relative;
+		font-size: $font-size;
+	}
+
+	&__search {
+		display: flex;
+		margin-bottom: 5px;
+
+		.showList select {
+			height: 45px;
+		}
+
+		.searchWrapper {
+			width: 100%;
+			padding-left: 10px;
+		}
+	}
+}
+
+.receive {
+	&__numbers {
+		display: flex;
+
+		.receive__arrow{
+			width: auto;
+			height: auto;
+			padding: 15px 15px 15px 0px;
+		}
+
+		@include max-ml{
+			width: 100%;
+			overflow: hidden;
+			overflow-x: scroll;
+			padding: 20px 0px;
+		}
+	}
+
+	&__number {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 205px;
+		height: 64px;
+		background: $bg-white;
+		border: 1px solid $border-black;
+		border-radius: 6px;
+		padding: 12px 20px;
+		transition: all .3s ease-in-out;
+
+		span:not(.receive__label) {
+			font-family: $fontBold;
+			font-size: $font_size_xxxl;
+			line-height: 43px;
+			letter-spacing: 0.36px;
+			color: $text-blue;
+		}
+
+		&:hover {
+			transform: translate3d(0, -3px, 0);
+			box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+		}
+	}
+
+	&__accepted {
+		margin-right: 20px;
+	}
+
+	&__label {
+		font-size: $font_size_l;
+		line-height: 20px;
+		letter-spacing: 0.18px;
+		color: $text-medium-grey;
+		font-weight: bold;
+		width: 117px;
+	}
+}

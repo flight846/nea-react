@@ -1,0 +1,59 @@
+@import 'styles/var.scss';
+
+.searchFilter {
+	width: 100%;
+
+	& li {
+		width: 100%;
+	}
+
+	& .searchForm {
+		display: flex;
+		& .searchTypeList {
+			display: flex;
+			margin-right: 8px;
+
+			& .form-control {
+				height: 45px;
+			}
+		}
+	}
+
+	& .searchWrapper {
+		position: relative;
+		// width: 100%;
+		display: flex;
+		flex: 1;
+
+		& .searchTextfield {
+			width: 100%;
+			border-radius: 10px;
+			border: solid 1px $border-grey;
+			padding: 10px 40px 10px 10px;
+			font-size: $font_size;
+		}
+
+		& .searchIcon {
+			position: absolute;
+			right: 10px;
+			top: 13px;
+			width: 20px;
+			z-index: 9;
+			cursor: pointer;
+		}
+
+		@include max-lg {
+			width: 100%;
+		}
+
+		&.mainSearch {
+			@include max-sm {
+				width: 100%;
+			}
+
+			@include md-to-ml {
+				width: 350px;
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+@import 'styles/var.scss';
+
+.owner-info{
+    padding-bottom:20px;
+
+    .owner-info__head{
+        background-color: $bg-white;
+        box-shadow: 0px 0px 5px 0px #bfbfbf;
+        padding: 10px 20px;
+        z-index: 1;
+        position: relative;
+    }
+    .owner-info__body{
+        background-color: $bg-skyBlue2;
+        padding: 10px 20px;
+
+        &.white-bg{
+            background-color: $bg-white;
+        }
+    }
+}

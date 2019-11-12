@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { ReactComponent as AddImage } from 'assets/svg/AddImage.svg';
 import { ReactComponent as Plus } from 'assets/svg/plus.svg';
 import { ReactComponent as CloseIcon } from 'assets/svg/close.svg';
@@ -6,15 +6,17 @@ import { common } from 'assets';
 import CustomSlider from '../carousel';
 
 const ActionModal = props => {
-return (
+  return (
     <div className="action-modal shadow-sm">
-        <div className="modal-header">
-            <button type="button" className="close" aria-label="Close">
-                <CloseIcon style={{ height: '40px', width: '40px', display: 'block' }}/>
-            </button>
-        </div>
-        <div className="modal-body">
-            {/* <div className="reject-edit-preview">
+      <div className="modal-header">
+        <button type="button" className="close" aria-label="Close">
+          <CloseIcon
+            style={{ height: '40px', width: '40px', display: 'block' }}
+          />
+        </button>
+      </div>
+      <div className="modal-body">
+        {/* <div className="reject-edit-preview">
                 <form>
                     <p className="bold-text mb-4">Image (optional)</p>
                     <div className="upload-drop-zone" id="drop-zone">
@@ -38,15 +40,15 @@ return (
                     </div>
                 </form>
             </div> */}
-            <div className="is-reject-form">
-                <p className="mb-4 bold-text">Reason</p>
-                <div className="is-preview-upload">
-                    <p>Damaged / Broken / defaced barcode</p>
-                    <p>Others: Unofficial seal</p>
-                    <CustomSlider />
-                </div>
-            </div>
-            {/* <div className="is-edit-reject">
+        <div className="is-reject-form">
+          <p className="mb-4 bold-font title">Reason</p>
+          <div className="is-preview-upload">
+            <p>Damaged / Broken / defaced barcode</p>
+            <p>Others: Unofficial seal</p>
+            <CustomSlider />
+          </div>
+        </div>
+        {/* <div className="is-edit-reject">
                 <p className="mb-4 bold-text">Reason</p>
                 <form>
                     <div className="form-nea__checkgroup">
@@ -120,16 +122,20 @@ return (
                                 </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </form>
             </div> */}
-        </div>
-        <div className="modal-footer justify-content-end">
-            <button type="button" className="btn btn-light">Cancel</button>
-            <button type="submit" className="btn btn-pri">Next</button>
-        </div>
+      </div>
+      <div className="modal-footer justify-content-center">
+        <button type="button" className="btn btn-sec">
+          Cancel
+        </button>
+        <button type="submit" className="btn btn-pri">
+          Next
+        </button>
+      </div>
     </div>
-    )
-}
+  );
+};
 
-export default ActionModal
+export default ActionModal;

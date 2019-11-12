@@ -35,13 +35,13 @@ const Pagination = props => {
     <div className={`pagination__main ${className || ''}`}>
       <div className="paginationCont">
         <ul>
-          <li hidden={number === 0}>
+          <li hidden={number <= 0}>
             <a href="#" onClick={e => handleClick(e, number - 1)}>
               Previous
             </a>
           </li>
           {renderPagers()}
-          <li hidden={number === totalPages - 1 || totalPages <= 1}>
+          <li hidden={number >= totalPages - 1}>
             <a href="#" onClick={e => handleClick(e, number + 1)}>
               Next
             </a>

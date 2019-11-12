@@ -7,7 +7,7 @@
 	position: fixed;
 	top: 0;
 	z-index: 1000;
-	background-color: $bg-light-grey;
+	background-color: $bg-light-grey2;
 
 	& img {
 		padding-right: 5px;
@@ -40,14 +40,14 @@
 	top: 26px;
 
 	& .logoImg {
-		width: 160px;
+		width: 150px;
 	}
 }
 
 .headerRHS {
-	padding-top: 13px;
+	padding-top: 6px;
 	& li {
-		display: inline-block; 
+		display: inline-block;
 		padding: 0 20px;
 
 		@include max-ml {
@@ -67,8 +67,8 @@
 		}
 
 		& .userName {
-			font-size: $font_size; 
-			font-family: $fontBold; 
+			font-size: $font_size;
+			font-family: $fontBold;
 			display: inline-block;
 
 			@include max-ml {
@@ -83,19 +83,19 @@
 		}
 
 		& .fontIncrease {
-			border: solid 1px $border-light-grey2; 
-			border-radius: 20px; 
+			border: solid 1px $border-grey;
+			border-radius: 20px;
 
 			@include max-ml {
 				display: none;
 			}
 
 			& li {
-				border-right: solid 1px $border-light-grey2;
+				border-right: solid 1px $border-grey;
 				padding: 0;
 
 				&:last-child {
-					border-right: none; 
+					border-right: none;
 					padding-right: 8px;
 				}
 

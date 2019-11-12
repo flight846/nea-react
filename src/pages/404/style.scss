@@ -44,7 +44,7 @@ $notfound_btn_color: #40AADE;
 		background-color: $notfound_btn_color;
 		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.16);
 		border-radius: 8px;
-		color: $white;
+		color: $text-white;
 		width: percentage(1);
 		border: none;
 		height: 56px;
@@ -56,7 +56,7 @@ $notfound_btn_color: #40AADE;
 
 		&:hover,
 		&:focus {
-			color: $white;
+			color: $text-white;
 		}
 	}
 

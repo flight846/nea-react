@@ -1,0 +1,11 @@
+@import 'styles/var.scss';
+
+.lInspectionWrapper {
+    border: solid 1px $border-grey;
+    padding: 30px;
+}
+
+.reasonTxtfield {
+	width: 100%;
+	height:100px;
+}

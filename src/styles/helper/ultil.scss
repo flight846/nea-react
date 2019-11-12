@@ -2,7 +2,6 @@
 	color: $main_color;
 }
 
-
 /* MARGINS
 -------------------------------------------------- */
 .marginTop10m {
@@ -204,15 +203,23 @@
 .marginLeft10 {
 	margin-left: 10px;
 }
+.marginLeft30 {
+	margin-left: 30px;
+}
 
 .marginRight0 {
 	margin-right: 0px;
 }
 
-.d-inline-b { display: inline-block!important; }
+.marginRight20 {
+	margin-right: 20px;
+}
+
+.d-inline-b {
+	display: inline-block !important;
+}
 
 @media screen and (max-width: 575px) {
-
 	.xs-marginTop0 {
 		margin-top: 0px;
 	}
@@ -321,16 +328,28 @@
 		margin-right: 0px;
 	}
 
-	.xs-marginLeft0 { margin-left: 0px; }
-	.xs-marginRight0 { margin-right: 0px; }
-	.d-mobile-only { display: none!important; }
-	.d-ipad-only { display: block!important; }
-	.d-desktop-only { display: none!important; }
+	.xs-marginLeft0 {
+		margin-left: 0px;
+	}
 
+	.xs-marginRight0 {
+		margin-right: 0px;
+	}
+
+	.d-mobile-only {
+		display: none !important;
+	}
+
+	.d-ipad-only {
+		display: block !important;
+	}
+
+	.d-desktop-only {
+		display: none !important;
+	}
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
-
 	.sm-marginTop0 {
 		margin-top: 0px;
 	}
@@ -447,14 +466,20 @@
 		margin-right: 0px;
 	}
 
-	.d-mobile-only { display: none!important; }
-	.d-ipad-only { display: block!important; }
-	.d-desktop-only { display: none!important; }
+	.d-mobile-only {
+		display: none !important;
+	}
 
+	.d-ipad-only {
+		display: block !important;
+	}
+
+	.d-desktop-only {
+		display: none !important;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-
 	.md-marginTop0 {
 		margin-top: 0px;
 	}
@@ -567,14 +592,20 @@
 		margin-right: 0px;
 	}
 
-	.d-mobile-only { display: none!important; }
-	.d-ipad-only { display: block!important; }
-	.d-desktop-only { display: none!important; }
+	.d-mobile-only {
+		display: none !important;
+	}
 
+	.d-ipad-only {
+		display: block !important;
+	}
+
+	.d-desktop-only {
+		display: none !important;
+	}
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-
 	.lg-marginTop0 {
 		margin-top: 0px;
 	}
@@ -687,10 +718,17 @@
 		margin-right: 0px;
 	}
 
-	.d-mobile-only { display: none!important; }
-	.d-ipad-only { display: block!important; }
-	.d-desktop-only { display: none!important; }
+	.d-mobile-only {
+		display: none !important;
+	}
 
+	.d-ipad-only {
+		display: block !important;
+	}
+
+	.d-desktop-only {
+		display: none !important;
+	}
 }
 
 /* PADDINGS
@@ -1317,9 +1355,15 @@
 }
 
 @media (min-width: 1200px) {
-	.d-mobile-only { display: none!important; }
-	.d-ipad-only { display: none!important; }
-	.d-desktop-only { display: block!important; }
+	.d-mobile-only {
+		display: none !important;
+	}
+	.d-ipad-only {
+		display: none !important;
+	}
+	.d-desktop-only {
+		display: block !important;
+	}
 }
 
 body {
@@ -1327,7 +1371,7 @@ body {
 	padding: 0;
 	font-family: 'LATORegular';
 	font-size: 15px;
-	color: #000;
+	color: $text-black;
 	font-weight: 500;
 	overflow-x: hidden;
 }
@@ -1341,8 +1385,15 @@ ul {
 a,
 a:hover {
 	text-decoration: none;
-	color: #000;
 	display: block;
+}
+
+a {
+	color: $text-bondi-blue;
+}
+
+a:hover {
+	color: $text-black;
 }
 
 .hidden {
@@ -1356,7 +1407,6 @@ a:hover {
 .clearfix::after {
 	display: none;
 }
-
 
 /* HEADINGS
 -------------------------------------------------- */
@@ -1425,43 +1475,46 @@ h3 {
 	font-size: 12px;
 }
 
-
 /* TEXT COLORS
 -------------------------------------------------- */
 .text-black {
-	color: #354052;
+	color: $text-black;
 }
 
 .text-white {
-	color: #FFFFFF;
+	color: $text-white;
 }
 
 .text-light-grey {
-	color: #F5F5F5;
+	color: $text-light-grey;
 }
 
 .text-medium-grey {
-	color: #757575;
+	color: $text-medium-grey;
 }
 
 .text-blue {
-	color: #0077FF;
+	color: $text-blue;
 }
 
 .text-green {
-	color: #7AC046;
+	color: $text-green;
 }
 
 .text-orange {
-	color: #FFA60E;
+	color: $text-orange;
 }
 
 .text-red {
-	color: #D6004E;
+	color: $text-red;
+}
+
+.text-dark-red {
+	color: $text-dark-red;
 }
 
 .text-magenta {
-	color: #f7149f;
+	color: $text-magenta;
 }
 
 /* HR COLORS
@@ -1505,7 +1558,7 @@ h3 {
 }
 
 .bg-white {
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 }
 
 .bg-offWhite {
@@ -1513,31 +1566,39 @@ h3 {
 }
 
 .bg-light-grey {
-	background-color: #F5F5F5;
+	background-color: #f5f5f5;
 }
 
 .bg-light-blue {
-	background-color: #E3F3FF;
+	background-color: #e3f3ff;
+}
+
+.bg-medium-grey {
+	background-color: $bg-medium-grey;
 }
 
 .bg-blue {
-	background-color: #0077FF;
+	background-color: #0077ff;
 }
 
 .bg-light-green {
-	background-color: #8EC962;
+	background-color: #8ec962;
 }
 
 .bg-green {
-	background-color: #7AC046;
+	background-color: $bg-green;
+}
+
+.bg-green2 {
+	background-color: $bg-green2;
 }
 
 .bg-light-orange {
-	background-color: #FFD71E;
+	background-color: #ffd71e;
 }
 
 .bg-orange {
-	background-color: #FFA60E;
+	background-color: #ffa60e;
 }
 
 .bg-yellow {
@@ -1547,7 +1608,6 @@ h3 {
 .bg-pink.warning {
 	background-color: #fff5f6 !important;
 }
-
 
 /* TEXT
 -------------------------------------------------- */
@@ -1568,14 +1628,12 @@ h3 {
 }
 
 .bold-font {
-	// font-family: 'LATOBold';
-	font-weight: bold;
+	font-family: $fontBold;
 }
 
 .italic-font {
 	font-style: italic;
 }
-
 
 /* BORDERS
 -------------------------------------------------- */
@@ -1611,7 +1669,6 @@ h3 {
 	border: none !important;
 }
 
-
 /* POSITIONS
 -------------------------------------------------- */
 .posAbs {
@@ -1621,7 +1678,6 @@ h3 {
 .posFix {
 	position: fixed;
 }
-
 
 /* WIDTHS
 -------------------------------------------------- */
@@ -1633,14 +1689,13 @@ h3 {
 	max-width: 100%;
 }
 
-
 /* BUTTONS
 -------------------------------------------------- */
 .btn.btn-pri {
-	padding: 10px 35px;
+	padding: 12px 35px;
 	border-radius: 10px;
-	background-color: #0077FF;
-	color: #FFFFFF;
+	background-color: #0077ff;
+	color: #ffffff;
 	font-size: 14px;
 	// font-family: 'LatoBold';
 	font-weight: bold;
@@ -1648,14 +1703,38 @@ h3 {
 }
 
 .btn.btn-sec {
-	padding: 10px 35px;
+	padding: 12px 35px;
 	border-radius: 10px;
-	background-color: #FFFFFF;
-	color: #0077FF;
-	border: solid 1px #0077FF;
+	background-color: #ffffff;
+	color: #0077ff;
+	border: solid 1px #0077ff;
 	font-size: 14px;
 	font-family: 'LATORegular';
 	display: inline-block;
+}
+
+.btn.btn-pri-small {
+	padding: 10px 15px;
+	border-radius: 10px;
+	background-color: #0077ff;
+	color: #ffffff;
+	font-size: 14px;
+	// font-family: 'LatoBold';
+	font-weight: bold;
+	display: inline-block;
+}
+
+.btn.btn-sec-small {
+	padding: 10px 15px;
+	border-radius: 10px;
+	background-color: #ffffff;
+	color: #0077ff;
+	border: solid 1px #0077ff;
+	font-size: 14px;
+	font-family: 'LATORegular';
+	display: inline-block;
+	//margin-right: 4px;
+	//margin-left: 4px;
 }
 
 .btn.btn-pri.full-width,
@@ -1663,6 +1742,11 @@ h3 {
 	width: 100%;
 }
 
+.btn.btn-pri.half-width,
+.btn.btn-sec.half-width,
+.btn.btn-sec-small.half-width {
+	width: 50%;
+}
 
 /* TEXTFIELD
 -------------------------------------------------- */
@@ -1677,16 +1761,14 @@ h3 {
 }
 
 .form-group.hasError .textfield {
-	border: solid 1px #D6004E;
+	border: solid 1px #d6004e;
 }
 
 .errMsg {
 	font-size: 12px;
-	color: #D6004E;
+	color: #d6004e;
 	padding-top: 3px;
 }
-
-
 
 .actionBtns .btn-sec {
 	float: left;
@@ -1733,6 +1815,154 @@ h3 {
 .sampleSelCont .sampleCount {
 	float: right;
 	font-size: 36px;
-	color: #0077FF;
+	color: #0077ff;
 	padding-left: 20px;
+}
+
+.img-thumbnail {
+	display: inline-block;
+	width: 150px;
+	margin-bottom: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+/* CALENDAR
+-------------------------------------------------- */
+
+.datepicker__toggle .datepicker-controller {
+	margin-top: 20px;
+	height: 355px;
+}
+
+.DayPickerKeyboardShortcuts_buttonReset,
+.DateRangePickerInput_arrow_svg,
+.DateInput_fangStroke {
+	display: none;
+}
+
+.DayPicker_transitionContainer {
+	border: none;
+	border-top: solid 1px $border-grey;
+}
+.CalendarDay__default {
+	border: none;
+	color: $text-black;
+}
+.CalendarDay__default:hover {
+	background-color: $bg-light-grey2;
+	border: none;
+}
+.DayPicker__withBorder,
+.DateRangePickerInput__withBorder {
+	border: none;
+	box-shadow: none;
+}
+.DayPickerNavigation_button__default {
+	border: none;
+	width: 20px;
+	height: 20px;
+
+	& .DayPickerNavigation_svg__horizontal {
+		display: none;
+	}
+}
+
+.DateInput_input {
+	border: solid 1px $border-grey;
+	border-radius: 10px;
+}
+
+.DayPickerNavigation_button__default:hover {
+	border: none;
+}
+
+.DayPickerNavigation_button__default:focus {
+	border: solid 1px $border-grey;
+}
+
+.DayPickerNavigation_leftButton__horizontalDefault,
+.DayPickerNavigation_leftButton__horizontalDefault:active {
+	background: url(../../assets/svg/cal-left.svg) no-repeat 0 0;
+}
+
+.DayPickerNavigation_rightButton__horizontalDefault,
+.DayPickerNavigation_rightButton__horizontalDefault:active {
+	background: url(../../assets/svg/cal-right.svg) no-repeat 0 0;
+}
+
+.DayPickerNavigation_button__horizontalDefault {
+	top: 24px;
+}
+
+.DayPicker_weekHeader_li small {
+	font-size: $font_size_sm;
+	color: $text-medium-grey;
+}
+
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover {
+	color: $text-white;
+	border: none;
+}
+
+.CalendarDay__selected_start {
+	background: linear-gradient(90deg, transparent 50%, $bg-bondi-blue2 0);
+}
+.CalendarDay__selected_end {
+	background: linear-gradient(270deg, transparent 50%, $bg-bondi-blue2 0);
+}
+
+.CalendarDay__selected span,
+.CalendarDay__selected:active span {
+	background-color: $bg-bondi-blue;
+	border-radius: 100%;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.CalendarDay__selected_span,
+.CalendarDay__hovered_span,
+.CalendarDay__hovered_span:hover {
+	background-color: $bg-bondi-blue2;
+	color: $text-white;
+	border: none;
+}
+.CalendarDay__selected_span:hover {
+	background-color: $bg-bondi-blue3;
+	border: none;
+}
+
+.DateInput {
+	margin-left: 20px;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.DateInput_input__focused,
+.DateInput_input:hover,
+.DateInput_input:focus,
+.DateInput_input:active {
+	background-color: $bg-light-grey2;
+}
+
+.CalendarDay__blocked_out_of_range,
+.CalendarDay__blocked_out_of_range:active,
+.CalendarDay__blocked_out_of_range:hover {
+	color: $text-light-grey;
+}
+
+.DateInput_input {
+	font-size: $font_size;
+}
+
+.CalendarMonth_caption {
+	color: $text-black;
+	font-family: $fontBold;
+	font-size: $font_size_l;
 }

@@ -1,14 +1,13 @@
 @import 'styles/var.scss';
 
 .filterMainWrapper {
-
 	@include max-sm {
 		& .navbar-collapse {
 			display: block !important;
 		}
 	}
 
-	background-color: $bg-white;
+	// background-color: $bg-white;
 	padding: 15px 30px;
 
 	@include max-sm {
@@ -17,10 +16,12 @@
 	}
 
 	&.navbar-expand .navbar-nav .dropdown-menu {
-		-webkit-box-shadow: 0px 0px 18px 0px rgba(181, 181, 181, 1);
-		-moz-box-shadow: 0px 0px 18px 0px rgba(181, 181, 181, 1);
-		box-shadow: 0px 0px 18px 0px rgba(181, 181, 181, 1);
-		padding: 30px 20px 5px 20px;
+		-webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.14);
+		-moz-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.14);
+		box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.14);
+		border: 1px solid $border-grey;
+		border-radius: 10px;
+		padding: 20px 20px 20px 20px;
 		margin: 0;
 		z-index: 100;
 		left: auto;
@@ -40,23 +41,25 @@
 	& .nav-item.dropdown {
 		padding: 5px 10px;
 		margin-left: 8px;
+		background-color: $bg-white;
+		border-radius: 10px;
 	}
 
 	& .nav-item.dropdown.show {
 		background-color: $bg-blue;
-		border-radius: 10px;
 	}
 
 	& .nav-item.dropdown.show .dropdown-toggle::after {
 		display: block;
 		content: '';
-		/*background: url(../assets/svg/down-arrow.svg) no-repeat;*/
+		background: url(../../../assets/svg/down-arrow.svg) no-repeat;
 		height: 25px;
 		width: 30px;
 		border: none;
 		position: absolute;
-		bottom: -30px;
+		bottom: -22px;
 		left: 34px;
+		background-size: 30px 30px;
 	}
 
 	& .nav-item.dropdown.show a.nav-link {
@@ -81,7 +84,6 @@
 
 	/* Filter */
 	.filterWrapper {
-
 		@include max-sm {
 			display: inline-block;
 		}
@@ -94,17 +96,19 @@
 			}
 
 			& .filterColsCont {
-				border-bottom: solid 1px $border-light-grey2;
+				border-bottom: solid 1px $border-grey;
+				padding-bottom: 10px;
 
 				& .filterCols {
-					width: 300px;
-					height: 210px;
-					padding: 0 35px;
-					margin-bottom: 35px;
-					float: left;
-					border-right: solid 1px $border-light-grey2;
+					width: 25%;
+					min-width: 250px;
+					height: 205px;
+					padding: 0 25px;
+					margin-bottom: 10px;
+					display: inline-block;
+					border-right: solid 1px $border-grey;
 
-					&:last-child {
+					&.filterColsLastItem {
 						border-right: none;
 					}
 
@@ -121,13 +125,13 @@
 			}
 
 			& .chkboxCont {
-				overflow-y: scroll;
+				overflow-y: auto;
 				margin-top: 10px;
 				height: 120px;
 			}
 
 			& .filterBtnsCont {
-				padding: 20px 0;
+				padding: 20px 0 0 0;
 				float: right;
 
 				& .filterBtns {
@@ -164,18 +168,18 @@
 				padding: 10px 20px 7px 20px;
 
 				&:hover {
-					background-color: $bg-skyBlue2;
+					background-color: $bg-light-grey2;
 				}
 			}
 
 			& .sortBtnsCont {
-				margin: 0 20px;
+				margin: 0 20px 2px;
 				padding: 20px 0;
-				border-top: solid 1px $border-light-grey2;
+				border-top: solid 1px $border-grey;
 
 				& .sortBtns {
 					float: left;
-					margin-right: 15px;
+					margin-right: 8px;
 
 					&:last-child {
 						margin-right: 0;
@@ -185,7 +189,6 @@
 		}
 	}
 }
-
 
 // .searchWrapper {
 // 	position: relative;

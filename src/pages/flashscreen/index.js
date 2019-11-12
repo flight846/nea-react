@@ -18,11 +18,11 @@ class FlashScreen extends Component {
     const url_string = window.location.href;
     const url = new URL(url_string);
     const token = url.searchParams.get('token') || getData('token');
-
+    console.log(token);
     if (!token) {
-      this.setState({ redirectLink: '/blocked' });
+      this.setState({ redirectLink: '/login' });
     } else {
-      this.setState({ redirectLink: '/my-workspace' });
+      this.setState({ redirectLink: '/dashboard' });
     }
   }
 

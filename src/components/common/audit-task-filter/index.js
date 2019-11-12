@@ -23,11 +23,11 @@ import {
 
 // import './style.scss';
 
-const Premises = ['All', 'Apartment', 'HDB'];
+const Premises = ['Apartment', 'HDB'];
 
-const Divisions = ['All', 'Ang Mo Kio', 'Aljunied', 'Eunos'];
+const Divisions = ['Ang Mo Kio', 'Aljunied', 'Eunos'];
 
-const Statuses = ['All', 'Pending Audit', 'Show Cause'];
+const Statuses = ['Pending Audit', 'Show Cause'];
 
 class AuditTaskFilter extends Component {
   constructor(props) {
@@ -46,9 +46,7 @@ class AuditTaskFilter extends Component {
 
   filterPremises = event => {
     const text = event.target.value;
-    const filteredPremises = Premises.filter(item =>
-      item.toLowerCase().includes(text.toLowerCase()),
-    );
+    const filteredPremises = Premises.filter(item => item.toLowerCase().includes(text.toLowerCase()));
 
     this.setState({
       filteredPremises,
@@ -57,9 +55,7 @@ class AuditTaskFilter extends Component {
 
   filterDivisions = event => {
     const text = event.target.value;
-    const filteredDivisions = Divisions.filter(item =>
-      item.toLowerCase().includes(text.toLowerCase()),
-    );
+    const filteredDivisions = Divisions.filter(item => item.toLowerCase().includes(text.toLowerCase()));
 
     this.setState({
       filteredDivisions,
@@ -137,13 +133,7 @@ class AuditTaskFilter extends Component {
 
   render() {
     const { className, isShowFilter, toggle, statusFilter } = this.props;
-    const {
-      premises,
-      divisions,
-      statuses,
-      filteredPremises,
-      filteredDivisions,
-    } = this.state;
+    const { premises, divisions, statuses, filteredPremises, filteredDivisions } = this.state;
     return (
       <div className={`filterCont ${className}`}>
         <div id="FilterPopover" onClick={toggle}>

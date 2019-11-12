@@ -10,18 +10,16 @@ $nocolor: transparent;
 $white: #ffffff;
 $black: #000000;
 
-
 // web color
-$main_color: #0BA5D3;
-$second_color: #4BADF3;
+$main_color: #0ba5d3;
+$second_color: #4badf3;
 $text_color: #000000;
 $title_color: #333333;
-$border_color: #E9F3F5;
-$border_color_1: #C9C9C9;
+$border_color: #e9f3f5;
+$border_color_1: #c9c9c9;
 $place_holder: #494949;
-$web_bg: #FAFAFA;
-$modal_border: #EEEEEE;
-
+$web_bg: #fafafa;
+$modal_border: #eeeeee;
 
 /* FONT FAMILY
 -------------------------------------------------- */
@@ -29,7 +27,6 @@ $fontReg: 'LATORegular';
 $fontBold: 'LATOBold';
 $fontBoldItalic: 'DINBoldItalic';
 $fontItalic: 'LATOItalic';
-
 
 /* FONT SIZES
 -------------------------------------------------- */
@@ -42,59 +39,64 @@ $font_size_xl: 20px;
 $font_size_xxl: 22px;
 $font_size_xxxl: 36px;
 
-
 /* TEXT COLORS
 -------------------------------------------------- */
-$text-black: #354052;
-$text-white: #FFFFFF;
-$text-light-grey: #F5F5F5;
-$text-light-grey2: #CACACA;
-$text-grey: #666666;
-$text-medium-grey: #757575;
-$text-blue: #0077FF;
+$text-black: #333;
+$text-white: #ffffff;
+$text-light-grey: #dcdcdc;
+$text-light-grey2: #f4f4f4;
+$text-grey: #757575;
+$text-medium-grey: #909090;
+$text-blue: #0077ff;
+$text-bondi-blue: #1c8ec6;
 $text-dark-blue: #344152;
-$text-green: #7AC046;
-$text-orange: #FFA60E;
-$text-red: #D6004E;
-$text-magenta: #F7149F;
-
+$text-green: #7ac046;
+$text-orange: #ffa60e;
+$text-red: #d6004e;
+$text-dark-red: #D6004E;
+$text-magenta: #f7149f;
 
 /* BACKGROUND COLORS
 -------------------------------------------------- */
-$bg-black: #354052;
-$bg-white: #FFFFFF;
-$bg-offWhite: #f2f2f2;
-$bg-light-grey: #F5F5F5;
-$bg-light-blue: #E3F3FF;
-$bg-blue: #0077FF;
-$bg-blue2: #007BFF;
-$bg-skyBlue: #F0f5FB;
-$bg-skyBlue2: #E5F3FE;
-$bg-light-green: #8EC962;
-$bg-light-green2: #DDEECE;
-$bg-green: #7AC046;
-$border-light-grey2: #C2C5CA;
-$bg-light-orange: #FFD71E;
-$bg-orange: #FFA60E;
-$bg-yellow: #FFEF37;
-$bg-light-yellow: #FFFAC2;
-$bg-pink: #FFF5F6;
+$bg-black: #333333;
+$bg-white: #ffffff;
+$bg-green: #74b74a;
+$bg-green2: #bed73b;
+$bg-blue: #0077ff;
+$bg-blue2: #4a5ed1;
+$bg-bondi-blue: #1c8ec6;
+$bg-bondi-blue2: #8DC6E2;
+$bg-bondi-blue3: #77BBDD;
+$bg-yellow: #ffef36;
+$bg-medium-grey: #757575;
+$bg-light-grey1: #dcdcdc;
+$bg-light-grey2: #f4f4f4;
 
+$bg-skyBlue: #f0f5fb;
+$bg-skyBlue2: #e5f3fe;
+$bg-light-green: rgba(115, 183, 74, 0.2);
+$bg-light-green2: #ddeece;
+$bg-light-grey3: #f3f4f5;
+$bg-light-orange: #ffd71e;
+$bg-orange: #ffa60e;
+$bg-light-yellow: #ffcccc;
+$bg-pink: #fff5f6;
+$bg-light-pink: #FAE5ED;
 
 /* BORDER COLORS
 -------------------------------------------------- */
-$border-black: #354052;
-$border-white: #FFFFFF;
-$border-light-grey: #F5F5F5;
-$border-light-grey2: #C2C5CA;
-$border-grey: #666666;
+$border-black: #333333;
+$border-white: #ffffff;
+$border-light-grey: #f5f5f5;
+$border-light-grey2: #c2c5ca;
+$border-grey: #dcdcdc;
 $border-medium-grey: #757575;
-$border-blue: #0077FF;
-$border-green: #7AC046;
-$border-orange: #FFA60E;
-$border-rose: #D6004E;
-$border-magenta: #F7149F;
-
+$border-blue: #0077ff;
+$border-bondi-blue: #1c8ec6;
+$border-green: #7ac046;
+$border-orange: #ffa60e;
+$border-dark-red: #D6004E;
+$border-magenta: #f7149f;
 
 /* SCREEN SIZES
 -------------------------------------------------- */
@@ -105,6 +107,5 @@ $screen-lg: 991px;
 $screen-ml: 1024px;
 $screen-xl: 1200px;
 $screen-xxl: 1400px;
-
 
 @import './mixin.scss';

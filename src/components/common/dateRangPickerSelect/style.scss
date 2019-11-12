@@ -1,0 +1,18 @@
+@import 'styles/var.scss';
+
+.datepicker__toggle {
+	& .DayPicker__hidden {
+		visibility: visible;
+	}
+
+	& .showList {
+		display: inline-block;
+	}
+
+	& .datepicker-controller {
+		width: 619px;
+		height: 350px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
+}

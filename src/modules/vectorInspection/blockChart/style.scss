@@ -1,0 +1,148 @@
+@import 'styles/var.scss';
+
+.blkTbl {
+	& .tbl-headings {
+		background-color: $bg-light-grey1;
+	}
+}
+
+.blkTbl th {
+	text-align: center;
+
+	&:first-child {
+		text-align: left;
+		padding: 0;
+	}
+}
+
+.blkTbl td {
+	text-align: center;
+	border: solid 1px $border-grey;
+
+	&:first-child {
+		text-align: left;
+	}
+}
+
+.background {
+	width: 100%;
+	height: 50px;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+
+.line {
+  width: 198px;
+  height: 47px;
+  border-bottom: 1px solid $border-grey;
+  transform: translateY(-20px) translateX(0px) rotate(22deg);
+  position: absolute;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 1px;
+  left: 30px;
+}
+
+.top {
+  position: absolute;
+  top: 1px;
+  right: 30px;
+}
+
+.legendValue {
+	font-size: $font_size_xxl;
+	font-family: $fontBold;
+	position: relative;
+
+	& .sup {
+		position: absolute;
+		right: 3px;
+		top: -5px;
+		font-size: $font_size_sm;
+	}
+}
+
+.lvlLeft,
+.lvlRight {
+	float: left;
+}
+
+.lvlLeft {
+	width: 70px;
+	& .label1 span {
+		width: 50px;
+		display: inline-block;
+	}
+}
+
+.lvlRight {
+	font-size: $font_size_xxl;
+	padding-left: 20px;
+	text-align: center;
+}
+
+.blkChartSummaryCont {
+	background-color: $bg-white;
+	padding: 30px;
+}
+
+.blkChartSummary {
+	background-color: $bg-light-grey1;
+	padding: 20px;
+	@include max-ml {
+		padding-bottom: 0;
+	}
+
+	& .cols {
+		float: left;
+		width: 12.5%;
+
+		@include max-xl {
+			width: 20%;
+			padding-bottom: 20px;
+		}
+	}
+}
+
+.gravitrapSummary {
+	text-align: center;
+	padding: 30px 0;
+
+	& .gravitrapLHS {
+		color: $text-white;
+		background-color: #7988a1;
+		padding:12px 0;
+		width: 30%;
+		display: inline-block;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
+
+	& .gravitrapRHS {
+		color: $text-bondi-blue;
+		background-color: #BED73B;
+		padding:12px 0;
+		width: 70%;
+		display: inline-block;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+}
+
+.twoBtnsCont {
+	text-align: center;
+
+	& ul li {
+		width: 35%;
+		display: inline-block;
+		padding: 0 30px;
+		border-right: solid 1px $border-grey;
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+}

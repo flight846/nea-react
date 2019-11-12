@@ -21,8 +21,8 @@ h2 {
 }
 
 h3 {
-	font-size: 20px;
-	line-height: 22px;
+	font-size: 16px;
+	line-height: 20px;
 }
 
 @media (max-width: 767px) {
@@ -33,6 +33,13 @@ h3 {
 	}
 }
 
-.bold-text { font-family: $fontBold; font-size: $font_size; }
-.small-grey-text { font-family: $fontReg; font-size: $font_size_xs; margin-right: 5px; }
-
+.bold-text {
+	font-family: $fontBold;
+	font-size: $font_size;
+}
+.small-grey-text {
+	font-family: $fontReg;
+	font-size: $font_size_sm;
+	margin-right: 5px;
+	color: $text-medium-grey;
+}

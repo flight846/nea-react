@@ -1,51 +1,34 @@
+/* eslint-disable react/prefer-stateless-function */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-script-url */
 import React, { Component } from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
-import classnames from 'classnames';
-import { Link } from 'react-router-dom';
+import { Nav, NavItem, NavLink } from 'reactstrap';
 
 import { connect } from 'react-redux';
 
 import './style.scss';
 
 class TabNav extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    const { className, onToggleTab, activeTab } = this.props;
+    const { className, onToggleTab, activeTab, menu } = this.props;
     return (
       <Nav tabs>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '1' })}
-            onClick={() => { onToggleTab('1'); }}
-          >
-            Info
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '2' })}
-            onClick={() => { onToggleTab('2'); }}
-          >
-            Analysis
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '3' })}
-            onClick={() => { onToggleTab('3'); }}
-          >
-            Certification
-          </NavLink>
-        </NavItem>
+        {menu.map((menu, index) => (
+          <NavItem key={`tab_nav_${index + 1}`}>
+            <NavLink
+              className={activeTab === index.toString() ? 'active' : ''}
+              onClick={() => {
+                onToggleTab(index.toString());
+              }}
+            >
+              {menu}
+            </NavLink>
+          </NavItem>
+        ))}
       </Nav>
     );
   }
-};
+}
 
 const mapStateToProps = () => ({});
 

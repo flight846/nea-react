@@ -1,22 +1,19 @@
 @import 'styles/var.scss';
-@import 'styles/helper/typography.scss';
-@import 'styles/helper/buttons.scss';
-@import 'styles/helper/ultil.scss';
 
 .go-back {
 	a {
-			font-family: $fontBold;
-			position: relative;
-			padding: 15px 30px 35px 65px;
-			&:before {
-					content: "";
-					background: url(../../assets/svg/left-arrow.svg) no-repeat;
-					height: 20px;
-					width: 20px;
-					position: absolute;
-					top: 16px;
-					left: 36px;
-			}
+		font-family: $fontBold;
+		position: relative;
+
+		&:before {
+			content: '';
+			background: url(../../assets/svg/left-arrow.svg) no-repeat;
+			height: 20px;
+			width: 20px;
+			position: absolute;
+			top: 16px;
+			left: 36px;
+		}
 	}
 }
 
@@ -27,120 +24,225 @@
 	background-color: transparent;
 
 	&.bg-white {
-		padding: 2rem 1.8rem;
+		padding: 30px;
 	}
 
 	.card-body.section {
-		border-bottom: 1px solid $bg-light-grey;
+		border-bottom: 1px solid $border-grey;
 	}
-	.card-body { padding: 0; }
+
+	.card-body {
+		padding: 0;
+	}
 
 	.section {
-		border-bottom: 1px solid $border-light-grey;
+		border-bottom: 1px solid $border-grey;
+
 		@include max-ml {
-				padding: 1rem 2rem;
+			padding: 1rem 2rem;
 		}
 	}
-	.section .details-info { margin-bottom: 2em; }
-	.section .details-info:last-child { margin-bottom: 0; }
 
-	.btn-link { color: $text-black; height: 38px; width: 100%; text-align: left; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; padding: 0 10px; }
-	.btn-link:hover, .btn-link:visited, .btn-link:focus { text-decoration: none; }
+	.section .details-info {
+		margin-bottom: 30px;
+	}
+
+	.section .details-info:last-child {
+		margin-bottom: 0;
+	}
+
+	.btn-link {
+		color: $text-black;
+		height: 38px;
+		width: 100%;
+		text-align: left;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		position: relative;
+		padding: 0 10px;
+	}
+
+	.btn-link:hover,
+	.btn-link:visited,
+	.btn-link:focus {
+		text-decoration: none;
+	}
 
 	.nea-btn-group {
-			display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
 	}
+
 	// form button[type=submit] { position: absolute; bottom: 0; left: 0; }
-	.label-group { margin-bottom: 1rem; }
+	.label-group {
+		margin-bottom: 30px !important;
+	}
+
 	.collapse {
 		background-color: $bg-white;
+
 		.btn {
 			&.add-findings {
-				position: absolute; bottom: -1.5rem; left: 0;
+				position: absolute;
+				bottom: -1.5rem;
+				left: 0;
+
 				@include max-ml {
-						bottom: -1rem;
+					bottom: -1rem;
 				}
 			}
 		}
+
 		&.show {
 			margin-bottom: 65px;
 		}
 	}
-	.collapsing { background-color: $bg-white; }
+
+	.collapsing {
+		background-color: $bg-white;
+	}
 }
 
 .accordion-header {
 	border-bottom: none;
 	position: relative;
 	padding: 15px 30px;
+	font-size: 16px;
+	background-color: $bg-light-grey2;
+
 	&.orange {
 		background-color: $bg-light-yellow;
-		& .badge { color: $text-blue; }
+
+		& .badge {
+			color: $text-black;
+		}
 	}
+
 	&.green {
 		background-color: $bg-light-green2;
 	}
+
 	&.grey {
-		background-color: $bg-light-grey;
+		background-color: $bg-light-grey2;
 	}
 }
-.accordion-header:first-child { 
-	border: 0; border-radius: 0; 
+.accordion-header:first-child {
+	border: 0;
+	border-radius: 0;
 }
 
 .accordion {
-	margin-bottom: 30px;
+	margin-bottom: 0;
+	overflow: hidden;
 	position: relative;
 	cursor: pointer;
+	border-bottom: solid 1px $border-grey;
 	&.green {
-			.card-header { background-color: $bg-light-green2; }
-			.collapse { border-bottom: 4px solid $border-green; }
+		.card-header {
+			background-color: $bg-light-green2;
+		}
 	}
-	&.grey {
-			.card-header { background-color: $bg-light-grey; }
-			.collapse { border-bottom: 4px solid $border-medium-grey;  }
-	}
-	&.orange {
-			.card-header { background-color: $bg-light-yellow; }
-			.card-header .badge { color: $text-blue; }
-			.collapse { border-bottom: 4px solid $border-orange;  }
-	}
-	.section {
-			padding: 2rem; border-bottom: 1px solid $border-light-grey;
-			@include max-ml {
-					padding: 1rem 2rem;
-			}
-	}
-	.section .details-info { margin-bottom: 2em; }
-	.section .details-info:last-child { margin-bottom: 0; }
 
-	.btn-link { color: $text-black; height: 38px; width: 100%; text-align: left; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; padding: 0 10px; }
-	.btn-link:hover, .btn-link:visited, .btn-link:focus { text-decoration: none; }
+	&.grey {
+		.card-header {
+			background-color: $bg-light-grey2;
+		}
+	}
+
+	&.orange {
+		.card-header {
+			background-color: $bg-light-yellow;
+		}
+
+		.card-header .badge {
+			color: $text-black;
+		}
+	}
+
+	.section {
+		padding: 30px;
+		border-bottom: none;
+
+		@include max-ml {
+			padding: 1rem 2rem;
+		}
+	}
+
+	.section .details-info {
+		margin-bottom: 30px;
+	}
+
+	.section .details-info:last-child {
+		margin-bottom: 0;
+	}
+
+	.btn-link {
+		color: $text-black;
+		height: 38px;
+		width: 100%;
+		text-align: left;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		position: relative;
+		padding: 0 10px;
+	}
+
+	.btn-link:hover,
+	.btn-link:visited,
+	.btn-link:focus {
+		text-decoration: none;
+	}
 
 	.nea-btn-group {
-			display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
 	}
+
 	// form button[type=submit] { position: absolute; bottom: 0; left: 0; }
-	.label-group { margin-bottom: 1rem; }
-	.collapse {
-			background-color: $bg-white;
-			.btn {
-					&.add-findings {
-							position: absolute; bottom: -90px; left: 0;
-							@include max-ml {
-									bottom: -5.5rem;
-							}
-					}
-			}
-			&.show {
-					margin-bottom: 100px;
-			}
+	.label-group {
+		margin-bottom: 30px !important;
 	}
-	.collapsing { background-color: $bg-white; }
+
+	.collapse {
+		background-color: $bg-white;
+		.btn {
+			&.add-findings {
+				position: absolute;
+				bottom: -90px;
+				left: 0;
+				@include max-ml {
+					bottom: -5.5rem;
+				}
+			}
+		}
+	}
+
+	.collapsing {
+		background-color: $bg-white;
+	}
+	.collapsing {
+		background-color: $bg-white;
+	}
 	.toggleArrow {
-		&:after { 
+		&:after {
 			content: '';
-			background: url(../../assets/svg/dropdown-arrow.svg) no-repeat;
+			background: url(../../assets/svg/dropdown-arrow-up.svg) no-repeat;
 			display: block;
 			position: absolute;
 			top: 50%;
@@ -151,10 +253,13 @@
 			-webkit-transform: translateY(-50%);
 			transform: translateY(-50%);
 			transform: translateY(-50%);
-			-webkit-transition: -webkit-transform cubic-bezier(0.25,0.8,0.25,1) .5s;
-			transition: -webkit-transform cubic-bezier(0.25,0.8,0.25,1) .5s;
-			transition: transform cubic-bezier(0.25,0.8,0.25,1) .5s;
-			transition: transform cubic-bezier(0.25,0.8,0.25,1) .5s, -webkit-transform cubic-bezier(0.25,0.8,0.25,1) .5s;
+			-webkit-transition: -webkit-transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+			transition: -webkit-transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+			transition: transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+			transition: transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s,
+				-webkit-transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+			transition: transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s,
+				-webkit-transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
 		}
 	}
 }
@@ -164,30 +269,47 @@ select {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
+
 select::-ms-expand {
 	display: none;
-
 }
 
 // select { color: $text-blue; font-style: italic; }
 // select option { color: $text-black; font-style: normal; }
-.form-control { border-radius: .7rem; padding: 20px 0;
-	&[value]:not([value=""]) {
+.form-control {
+	border-radius: 0.7rem;
+	padding: 20px 0;
+
+	&[value]:not([value='']) {
 		border-color: $border-grey;
 		color: $text-blue;
 	}
 }
-input.form-control, textarea.form-control {
+
+input.form-control,
+textarea.form-control {
 	color: $text-blue;
-	&:focus { color: $text-blue; }
+
+	&:focus {
+		color: $text-blue;
+	}
+
 	padding: 10px 20px;
 	border-radius: 5px;
 }
-select.form-control { padding: 0 20px; border-radius: 5px; }
-select.form-control[value]:not([value=""]) {
+
+select.form-control {
+	padding: 0 20px;
+	border-radius: 5px;
+}
+
+select.form-control[value]:not([value='']) {
 	color: $text-blue;
-	option { color: $text-black; }
-};
+
+	option {
+		color: $text-black;
+	}
+}
 
 .nea-select-box.form-group {
 	position: relative;
@@ -204,7 +326,7 @@ select.form-control[value]:not([value=""]) {
 	height: 16px;
 	background-size: 16px 16px;
 	-webkit-transform: translateY(-50%);
-			transform: translateY(-50%);
+	transform: translateY(-50%);
 
 	@include max-ml {
 		right: 9%;
@@ -223,29 +345,45 @@ select.form-control[value]:not([value=""]) {
 		}
 	}
 }
-.form-nea__checkgroup-ul, .form-nea__checkgroup-toggle { display: none; }
-.form-nea__checkgroup-ul.show, .form-nea__checkgroup-toggle.show { display: block; }
+
+.form-nea__checkgroup-ul,
+.form-nea__checkgroup-toggle {
+	display: none;
+}
+
+.form-nea__checkgroup-ul.show,
+.form-nea__checkgroup-toggle.show {
+	display: block;
+}
+
 .form-nea__block {
 	display: block;
 }
+
 .form-nea__inline {
 	display: inline-block;
+
 	&:first-child {
-		margin-left: 3rem;
+		margin-left: 30px;
+
 		@include max-ml {
-			margin-left: 1rem;
+			margin-left: 15px;
 		}
 	}
+
 	&.sm-w-30p {
 		width: 25%;
+
 		@include max-ml {
-			width: 30%!important;
+			width: 30% !important;
 			margin-left: 0;
 		}
 	}
+
 	.custom-chckbbox {
-		margin-right: 3rem;
+		margin-right: 30px;
 	}
+
 	.custom-textbox {
 		margin-right: 1rem;
 		text-align: center;
@@ -254,6 +392,7 @@ select.form-control[value]:not([value=""]) {
 
 .nea-chkbx.form-group {
 	margin-bottom: 1rem;
+
 	.custom-chckbbox {
 		display: inline-block;
 		position: relative;
@@ -266,16 +405,17 @@ select.form-control[value]:not([value=""]) {
 		user-select: none;
 		padding-left: 32px;
 
-		input[type=checkbox] {
+		input[type='checkbox'] {
 			position: absolute;
 			top: 0;
 			left: 0;
 			opacity: 0;
 			cursor: pointer;
 		}
-		input[type=checkbox] + .checkmark {
+
+		input[type='checkbox'] + .checkmark {
 			background-color: transparent;
-			border: 0.5px solid #a3a3a3;
+			border: 1px solid $border-grey;
 			border-radius: 0.25rem;
 			background-color: transparent;
 			position: absolute;
@@ -285,13 +425,13 @@ select.form-control[value]:not([value=""]) {
 			width: 1.4rem;
 		}
 
-		input[type=checkbox] + .checkmark {
+		input[type='checkbox'] + .checkmark {
 			&:after {
 				display: none;
 			}
 		}
 
-		input[type=checkbox].checked + .checkmark {
+		input[type='checkbox'].checked + .checkmark {
 			background-color: $bg-blue;
 
 			&:after {
@@ -304,16 +444,15 @@ select.form-control[value]:not([value=""]) {
 			}
 		}
 	}
-
 }
 
-.col-form-label { padding: 0; }
-
-
-
+.col-form-label {
+	padding: 0;
+}
 
 .searchToken {
 	position: relative;
+
 	&.show {
 		.searchTextfield {
 			border-top: 1px solid $border-blue;
@@ -321,7 +460,8 @@ select.form-control[value]:not([value=""]) {
 			border-left: 1px solid $border-blue;
 			border-bottom-right-radius: 0;
 			border-bottom-left-radius: 0;
-			}
+		}
+
 		.chkboxCont {
 			display: block;
 			border-bottom: 1px solid $border-blue;
@@ -332,20 +472,20 @@ select.form-control[value]:not([value=""]) {
 			margin-top: -3px;
 		}
 	}
+
 	.chkboxCont {
 		display: none;
 		padding: 1rem 1rem 0;
 		background-color: $bg-white;
 		width: 100%;
 		height: 210px;
-		overflow-y: scroll;
+		overflow-y: auto;
 
 		@include max-ml {
-				height: 175px;
+			height: 175px;
 		}
 	}
 }
-
 
 .SampleSelWrapper {
 	padding: 30px 30px 30px 30px;
@@ -377,8 +517,3 @@ select.form-control[value]:not([value=""]) {
 		}
 	}
 }
-
-
-
-
-

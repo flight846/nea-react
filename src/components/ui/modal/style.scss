@@ -2,11 +2,11 @@
 @import 'styles/helper/buttons.scss';
 
 .modal {
-    .modal-dialog { 
-        width: -webkit-min-content; 
-        width: -moz-min-content; 
-        width: min-content; 
-        min-width: 420px; 
+    .modal-dialog {
+        width: -webkit-min-content;
+        width: -moz-min-content;
+        width: min-content;
+        min-width: 420px;
         max-width: 1000px;
         @include max-ml {
             margin: auto;
@@ -24,7 +24,7 @@
         padding: 0;
     }
 
-    .modal-body { 
+    .modal-body {
         @include max-ml {
             padding: 0;
         }
@@ -33,7 +33,7 @@
         // @include max-ml {
         //     padding: 1rem;
 		// }
-		
+
 		.system-modal {
 			.modal-footer {
                 border: none;
@@ -42,9 +42,9 @@
 		}
 
 		.action-modal {
-			.modal-body { 
-				padding: 1.5rem; 
-				form { margin-bottom: 30px; }
+			.modal-body {
+				padding: 1.5rem;
+
 				.is-reject-form {
 					width: 420px;
 					@include max-ml {
@@ -53,8 +53,8 @@
 				}
 				.slick-slider { padding: 0 30px; }
 				.slick-slide {
-					img { 
-						height: 287px; margin-bottom: 10px; 
+					img {
+						height: 287px; margin-bottom: 10px;
 						@include max-md {
 							height: 145px;
 						}
@@ -62,33 +62,30 @@
 				}
 			}
 			.modal-header { display: none; }
-			.modal-footer { padding: 2rem; }
+			.modal-footer { padding: 2rem; border-top: 1px solid $border-grey; }
 		}
 
         .modal-reason {
-            border: none;
-            border-bottom: 1px solid $border-grey; 
-            border-radius: 0;
-            padding-left: 0;
-        }
-
-        .modal-others {
-            padding-left: 32px;
+            border: 1px solid $border-grey;
+            border-radius: 10px;
+						resize:none;
+						padding: 10px;
+						background-color: $bg-white;
         }
     }
 }
 
-.upload-drop-zone { 
-	display: -webkit-box; 
-	display: -ms-flexbox; 
+.upload-drop-zone {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
-	width: 600px; 
-	height: 280px; 
-	background-color: $bg-light-grey; 
+	width: 600px;
+	height: 280px;
+	background-color: $bg-light-grey2;
 	border-style: dashed;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
@@ -100,12 +97,12 @@
 		position: relative;
 		width: auto;
 	}
-	
+
 	& input[type=file] {
 		opacity:0;
 		width: 70px;
 		position: absolute;
-		top: 0; 
+		top: 0;
 		left: 0;
 
 		@include max-ml {
@@ -140,8 +137,8 @@
 }
 
 .upload-drop-zone__files {
-	& li { 
-		margin: 10px 0; 
+	& li {
+		margin: 10px 0;
 		line-height: 24px;
 		&:after {
 			content: '';
@@ -149,7 +146,7 @@
 			background-size: 20px;
 			height: 24px;
 			width: 24px;
-			display: inline-block; 
+			display: inline-block;
 			margin: -7px 10px;
 			cursor: pointer;
 		}

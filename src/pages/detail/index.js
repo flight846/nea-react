@@ -1,6 +1,7 @@
+/* eslint-disable react/jsx-fragments */
+/* eslint-disable react/destructuring-assignment */
 import React, { Fragment, Component } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
-import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 
 import Header from 'components/ui/header';
@@ -18,19 +19,19 @@ class Detailpage extends Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      activeTab: '1'
+      activeTab: '0'
     };
   }
 
   toggle(tab) {
     if (this.state.activeTab !== tab) {
       this.setState({
-        activeTab: tab
+        activeTab: tab,
       });
     }
   }
 
-  render () {
+  render() {
     return (
       <Fragment>
         <Header />
@@ -43,61 +44,63 @@ class Detailpage extends Component {
                 <a href="#">Back to Inspection ID: VC-20215-11700</a>
               </div>
               <div className="tabsContainer">
-                <TabNav onToggleTab={ (tab) => { this.toggle(tab) } } activeTab={ this.state.activeTab }/>
+              <TabNav onToggleTab={ (tab) => { this.toggle(tab) } } activeTab={ this.state.activeTab } menu={['Info', 'Analysis', 'Certification']}/>
                 <TabContent activeTab={this.state.activeTab}  >
-                  <TabPane tabId="1">
-                    <p className="tab-pane__title text-bold">FORM 3 ID: 014989</p>
-                    <div className="card bg-white">
-                      <div className="card-body">
-                        <div className="row">
-                          <div className="col-4">
-                            <div className="label-group mb-4">
-                              <label className="col-form-label">RO</label>
-                              <p className="col-form-label font-weight-bold">Central</p>
+                  <TabPane tabId="0">
+                    <div className="tab-pane__group">
+                      <p className="tab-pane__title text-bold text-white">Form 3 ID: 014989</p>
+                      <div className="card bg-white">
+                        <div className="card-body">
+                          <div className="row">
+                            <div className="col-4">
+                              <div className="label-group mb-4">
+                                <label className="col-form-label">RO</label>
+                                <p className="col-form-label font-weight-bold">Central</p>
+                              </div>
                             </div>
-                          </div>
-                          <div className="col-4">
-                            <div className="label-group mb-4">
-                              <label className="col-form-label">Date and Time Collected</label>
-                              <p className="col-form-label font-weight-bold">01/01/2019 13:30</p>
+                            <div className="col-4">
+                              <div className="label-group mb-4">
+                                <label className="col-form-label">Date and Time Collected</label>
+                                <p className="col-form-label font-weight-bold">01/01/2019 13:30</p>
+                              </div>
                             </div>
-                          </div>
-                          <div className="col-4">
-                            <div className="label-group mb-4">
-                              <label className="col-form-label">Collector's Name (Designation)</label>
-                              <p className="col-form-label font-weight-bold">Ben Wong (Inspector)</p>
+                            <div className="col-4">
+                              <div className="label-group mb-4">
+                                <label className="col-form-label">Collector's Name (Designation)</label>
+                                <p className="col-form-label font-weight-bold">Ben Wong (Inspector)</p>
+                              </div>
                             </div>
-                          </div>
-                          <div className="col-4">
-                            <div className="label-group mb-4">
-                              <label className="col-form-label">Disease Control</label>
-                              <p className="col-form-label font-weight-bold">Survey Control</p>
+                            <div className="col-4">
+                              <div className="label-group mb-4">
+                                <label className="col-form-label">Disease Control</label>
+                                <p className="col-form-label font-weight-bold">Survey Control</p>
+                              </div>
                             </div>
-                          </div>
-                          <div className="col-4">
-                            <div className="label-group mb-4">
-                              <label className="col-form-label">Address of Premises</label>
-                              <p className="col-form-label font-weight-bold">Blk 300, Ang Mo Kio <br />Street 10, #10-10, <br /> S123456</p>
+                            <div className="col-4">
+                              <div className="label-group mb-4">
+                                <label className="col-form-label">Address of Premises</label>
+                                <p className="col-form-label font-weight-bold">Blk 300, Ang Mo Kio <br />Street 10, #10-10, <br /> S123456</p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </TabPane>
-                  <TabPane tabId="2">
+                  <TabPane tabId="1">
                   <div className="tab-pane__group">
-                      <p className="tab-pane__title">Habitat 1: Container<span className="m-1">|</span>XX cm2<span className="m-1">|</span>Kitchen</p>
-                      <div className="accordion orange is-edit" >
+                      <div className="tab-pane__title">Habitat 1: Container<span className="m-1">|</span>XX cm2<span className="m-1">|</span>Kitchen</div>
+                      <div className="accordion is-edit" >
                         <div id="habitat1">
-                          <div className="accordion-header orange">
-                            <span className="small-grey-text">Barcode ID: </span><span className="font-weight-bold">CRO-A123459-19</span><span className="badge badge-warning">Pending</span>
+                          <div className="accordion-header">
+                            <span className="">Barcode ID: </span><span className="font-weight-bold">CRO-A123459-19</span><span className="badge badge-warning">Pending</span>
                           </div>
                         </div>
                         <UncontrolledCollapse toggler="#habitat1">
                           <Card>
                             <CardBody>
                               <div className="row section">
-                                <div className="col-xl-3 col-5 mb-2">
+                                <div className="col-xl-3 col-5 mb-2 stacked">
                                   <span className="small-grey-text">Sample ID: </span><span className="font-weight-bold">CRO-A123459-19</span>
                                 </div>
                                 <div className="col-xl-9 col-7">
@@ -367,28 +370,32 @@ class Detailpage extends Component {
                                         <textarea className="form-control" name="" id="" rows="3" placeholder="Remarks">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quos nihil modi. Mollitia at odio molestias hic, provident aliquam magnam incidunt esse accusantium voluptate sapiente architecto tempore repellat quis eius?</textarea>
                                       </div>
                                     </div>
+                                    <div className="row">
+                                      <div className="col-12 text-center">
+                                        <button className="btn btn-outline-primary my-5" type="button">Add Findings</button>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
-                              <button className="btn btn-outline-primary m-4 add-findings" type="button">Add Findings</button>
                             </CardBody>
                           </Card>
                         </UncontrolledCollapse>
                       </div>
                     </div>
                     <div className="tab-pane__group">
-                      <p className="tab-pane__title">Habitat 2: Container<span className="m-1">|</span>XX cm2<span className="m-1">|</span>Kitchen</p>
-                      <div className="accordion green is-edit" >
+                      <div className="tab-pane__title">Habitat 2: Container<span className="m-1">|</span>XX cm2<span className="m-1">|</span>Kitchen</div>
+                      <div className="accordion is-edit" >
                         <div id="habitat2">
-                          <div className="accordion-header green">
-                          <span className="small-grey-text">Barcode ID: </span><span className="font-weight-bold">CRO-A123459-19</span><span className="badge badge-success">Identified</span>
+                          <div className="accordion-header">
+                          <span className="">Barcode ID: </span><span className="font-weight-bold">CRO-A123459-19</span><span className="badge badge-success">Identified</span>
                           </div>
                         </div>
                         <UncontrolledCollapse toggler="#habitat2">
                           <Card>
                             <CardBody>
                               <div className="row section">
-                                <div className="col-xl-3 col-5 mb-2">
+                                <div className="col-xl-3 col-5 mb-2 stacked">
                                   <span className="small-grey-text">Sample ID: </span><span className="font-weight-bold">CRO-A123459-19</span>
                                 </div>
                                 <div className="col-xl-9 col-7">
@@ -481,12 +488,12 @@ class Detailpage extends Component {
 
 
                     <div className="tab-pane__group">
-                      <p className="tab-pane__title">Habitat 3: Container<span className="m-1">|</span>XX cm2<span className="m-1">|</span>Location of breeding within premises</p>
+                      <div className="tab-pane__title">Habitat 3: Container<span className="m-1">|</span>XX cm2<span className="m-1">|</span>Location of breeding within premises</div>
 
-                      <div className="accordion grey is-edit" >
+                      <div className="accordion is-edit" >
                         <div id="habitat3">
-                          <div className="accordion-header grey">
-                            <span className="small-grey-text">Barcode ID: </span><span className="font-weight-bold">CRO-A123459-19</span><span className="badge badge-light">Sending to EHI</span>
+                          <div className="accordion-header">
+                            <span className="">Barcode ID: </span><span className="font-weight-bold">CRO-A123459-19</span><span className="badge badge-light">Sending to EHI</span>
                           </div>
                         </div>
                         <UncontrolledCollapse toggler="#habitat3">
@@ -536,13 +543,13 @@ class Detailpage extends Component {
                       </div>
                     </div>
                   </TabPane>
-                  <TabPane tabId="3">
+                  <TabPane tabId="2">
                     <div className="tab-pane__group shadow-sm">
                       <div className="card bg-white">
                         <div className="card-body">
                           <div className="row">
                             <div className="col-12">
-                              <div className="label-group mb-4">
+                              <div className="label-group paddingBottom30">
                                 <p className="col-form-label">I certify that I have examined the speciment(s) and the result of my findings are indicated above</p>
                               </div>
                             </div>
@@ -558,7 +565,7 @@ class Detailpage extends Component {
                               </div>
                             </div>
                             <div className="col-md-4 col-xl-3">
-                              <div className="searchToken shadow-sm show">
+                              <div className="searchToken show">
                                 <div className="searchWrapper">
                                   <input type="text" className="searchTextfield" placeholder="Enter" />
                                   <Search className="searchIcon" />
@@ -592,15 +599,18 @@ class Detailpage extends Component {
                               </div>
                             </div>
                           </div>
-                          <div className="row justify-content-end mt-5">
-                            <div className="label-group">
-                              <p className="mb-0">Ben Wong (Auto-populated)</p>
-                              <p className="small-grey-text mb-0">Name  Designation of Analyst Appointed</p>
+                          <div className="row mt-5">
+                            <div className="col-md-12 justify-content-end">
+                              <div className="label-group">
+                                <p className="mb-0">Ben Wong (Auto-populated)</p>
+                                <p className="small-grey-text mb-0">Name  Designation of Analyst Appointed</p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <div className="m-5" style={{display: 'flex', justifyContent: 'center'}}><button type="button" class="btn btn-pri">Submit</button></div>
                   </TabPane>
                 </TabContent>
               </div>
